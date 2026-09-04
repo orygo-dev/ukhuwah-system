@@ -333,12 +333,12 @@ class _TeacherContentReviewScreenState
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [Color(0xFF0B6EF3), Color(0xFF4C9CFF)],
+                  colors: [Color(0xFF007A33), Color(0xFF39B54A)],
                 ),
                 borderRadius: BorderRadius.circular(24),
                 boxShadow: const [
                   BoxShadow(
-                    color: Color(0x2B0B6EF3),
+                    color: Color(0x2B007A33),
                     blurRadius: 24,
                     offset: Offset(0, 10),
                   ),
@@ -480,7 +480,7 @@ class _TeacherContentReviewScreenState
           boxShadow: active
               ? const [
                   BoxShadow(
-                    color: Color(0x260B6EF3),
+                    color: Color(0x26007A33),
                     blurRadius: 16,
                     offset: Offset(0, 7),
                   ),

@@ -62,6 +62,15 @@ function shuffleTake<T>(items: T[], count: number) {
   return copy.slice(0, count);
 }
 
+async function optionalQuery<T>(fallback: T, run: () => Promise<T>): Promise<T> {
+  try {
+    return await run();
+  } catch (error) {
+    console.error("[dashboard] optional query failed", error);
+    return fallback;
+  }
+}
+
 export default async function DashboardPage() {
   const session = await auth();
   if (session?.user?.role === "SUPER_ADMIN") {
@@ -113,16 +122,18 @@ export default async function DashboardPage() {
         })
       : Promise.resolve([]),
     userId
-      ? getAffiliateRankSnapshot(userId)
+      ? optionalQuery(null, () => getAffiliateRankSnapshot(userId))
       : Promise.resolve(null),
-    getAffiliateLeaderboard(5),
-    prisma.marketplaceProduct.findMany({
-      where: { status: "PUBLISHED", store: { status: "ACTIVE" } },
-      include: {
-        store: { select: { id: true, name: true, city: true, flatShippingFee: true } },
-      },
-      take: 60,
-    }),
+    optionalQuery([], () => getAffiliateLeaderboard(5)),
+    optionalQuery([], () =>
+      prisma.marketplaceProduct.findMany({
+        where: { status: "PUBLISHED", store: { status: "ACTIVE" } },
+        include: {
+          store: { select: { id: true, name: true, city: true, flatShippingFee: true } },
+        },
+        take: 60,
+      })
+    ),
   ]);
   const marketSpotlight = shuffleTake(marketProductsRaw, 6).map(productPublicDto);
   const accessibleClassRooms = userId

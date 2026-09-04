@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ic_launcher_background">#1E88E5</color>
-    <color name="genpro_notification">#0B6EF3</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="ukhuwah_notification">#007A33</color>
+    <color name="ukhuwah_splash_background">#FFFFFF</color>
+    <color name="ukhuwah_primary">#007A33</color>
+    <color name="ukhuwah_primary_bright">#39B54A</color>
+    <color name="genpro_notification">#007A33</color>
     <color name="genpro_splash_background">#FFFFFF</color>
 </resources>

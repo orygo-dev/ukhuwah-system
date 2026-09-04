@@ -438,7 +438,7 @@ class TeacherProfileHero extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppRadii.hero),
       boxShadow: const [
         BoxShadow(
-          color: Color(0x33204AD5),
+          color: Color(0x33007A33),
           blurRadius: 28,
           offset: Offset(0, 14),
         ),
@@ -720,7 +720,7 @@ class StudentProfileHero extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppRadii.hero),
       boxShadow: const [
         BoxShadow(
-          color: Color(0x33204AD5),
+          color: Color(0x33007A33),
           blurRadius: 28,
           offset: Offset(0, 14),
         ),

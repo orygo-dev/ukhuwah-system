@@ -39,7 +39,7 @@ class LoginPageView extends StatefulWidget {
     this.loading = false,
     this.errorMessage,
     this.branding,
-    this.appName = 'GenPro',
+    this.appName = 'UKHUWAH Mobile',
     this.onForgotPassword,
   });
 
@@ -79,11 +79,15 @@ class _LoginPageViewState extends State<LoginPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0753DC),
+      backgroundColor: const Color(0xFFF4F8F4),
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset('assets/images/splash_background.png', fit: BoxFit.cover),
+          Image.asset(
+            'assets/images/login_background.jpg',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+          ),
           SafeArea(
             child: LayoutBuilder(
               builder: (context, constraints) {
@@ -105,7 +109,7 @@ class _LoginPageViewState extends State<LoginPageView> {
                             const SizedBox(height: 8),
                           _LoginHero(
                             compact: compact,
-                            height: compact ? 134 : 148,
+                            height: compact ? 210 : 252,
                             branding: widget.branding,
                             appName: widget.appName,
                           ),
@@ -170,11 +174,11 @@ class _LoginHero extends StatelessWidget {
       height: height,
       width: double.infinity,
       child: Padding(
-        padding: EdgeInsets.only(top: compact ? 12 : 20, bottom: 14),
+        padding: EdgeInsets.only(top: compact ? 8 : 12, bottom: 10),
         child: Column(
           children: [
-            _WhiteBrand(branding: branding, appName: appName),
-            const Spacer(),
+            _WhiteBrand(branding: branding, appName: appName, compact: compact),
+            SizedBox(height: compact ? 10 : 14),
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
@@ -212,10 +216,15 @@ class _LoginHero extends StatelessWidget {
 }
 
 class _WhiteBrand extends StatelessWidget {
-  const _WhiteBrand({required this.branding, required this.appName});
+  const _WhiteBrand({
+    required this.branding,
+    required this.appName,
+    required this.compact,
+  });
 
   final MobileBrandingDisplay? branding;
   final String appName;
+  final bool compact;
 
   @override
   Widget build(BuildContext context) {
@@ -223,50 +232,39 @@ class _WhiteBrand extends StatelessWidget {
     final resolvedAppName = branding?.appName.trim().isNotEmpty == true
         ? branding!.appName
         : appName;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          constraints: const BoxConstraints(maxWidth: 210),
-          height: 58,
-          child: logoUrl.isNotEmpty
-              ? Image.network(
-                  _resolveBrandUrl(logoUrl),
-                  fit: BoxFit.contain,
-                  filterQuality: FilterQuality.high,
-                  errorBuilder: (_, _, _) =>
-                      _BrandFallback(appName: resolvedAppName),
-                )
-              : _BrandFallback(appName: resolvedAppName),
-        ),
-      ],
+    final height = compact ? 104.0 : 132.0;
+    return SizedBox(
+      height: height,
+      width: double.infinity,
+      child: Center(
+        child: logoUrl.isNotEmpty
+            ? Image.network(
+                _resolveBrandUrl(logoUrl),
+                height: height,
+                fit: BoxFit.contain,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (_, _, _) =>
+                    _BrandFallback(appName: resolvedAppName, height: height),
+              )
+            : _BrandFallback(appName: resolvedAppName, height: height),
+      ),
     );
   }
 }
 
 class _BrandFallback extends StatelessWidget {
-  const _BrandFallback({required this.appName});
+  const _BrandFallback({required this.appName, required this.height});
 
   final String appName;
+  final double height;
 
   @override
-  Widget build(BuildContext context) => Row(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      Flexible(
-        child: Text(
-          appName,
-          overflow: TextOverflow.ellipsis,
-          style: const TextStyle(
-            color: Color(0xFF1554BF),
-            fontSize: 28,
-            fontWeight: FontWeight.w900,
-            letterSpacing: -.8,
-          ),
-        ),
-      ),
-    ],
+  Widget build(BuildContext context) => Image.asset(
+    'assets/images/native_splash_logo.png',
+    height: height,
+    fit: BoxFit.contain,
+    filterQuality: FilterQuality.high,
+    semanticLabel: appName,
   );
 }
 
@@ -762,13 +760,13 @@ class _GradientLoginButtonState extends State<_GradientLoginButton> {
             gradient: const LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xFF173DBB), Color(0xFF2166E5), Color(0xFF168BD8)],
+              colors: [Color(0xFF0B5A26), Color(0xFF007A33), Color(0xFF39B54A)],
             ),
             borderRadius: BorderRadius.circular(18),
-            border: Border.all(color: const Color(0x3349A4FF)),
+            border: Border.all(color: const Color(0x338DC63F)),
             boxShadow: const [
               BoxShadow(
-                color: Color(0x44204AD5),
+                color: Color(0x44007A33),
                 blurRadius: 24,
                 offset: Offset(0, 11),
               ),
@@ -914,7 +912,7 @@ class _LoginPoweredBy extends StatelessWidget {
   Widget build(BuildContext context) => const Text.rich(
     TextSpan(
       style: TextStyle(
-        color: Color(0xD9FFFFFF),
+        color: Color(0xFF5E6F5E),
         fontSize: 12,
         letterSpacing: .2,
       ),
@@ -922,7 +920,10 @@ class _LoginPoweredBy extends StatelessWidget {
         TextSpan(text: 'powered by '),
         TextSpan(
           text: "iBaenk's",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w800),
+          style: TextStyle(
+            color: Color(0xFF0B5A26),
+            fontWeight: FontWeight.w800,
+          ),
         ),
       ],
     ),

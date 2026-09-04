@@ -28,7 +28,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:609928455259:android:e533f8c1c1cf207b6b0b7e",
         "android_client_info": {
-          "package_name": "com.genpro.app"
+          "package_name": "com.ukhuwahmobile.app"
         }
       },
       "oauth_client": [],
@@ -47,7 +47,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:609928455259:android:e533f8c1c1cf207b6b0b7e",
         "android_client_info": {
-          "package_name": "com.genpro.teacher"
+          "package_name": "com.ukhuwahmobile.teacher"
         }
       },
       "oauth_client": [],

@@ -1,4 +1,4 @@
-package com.genpro.app
+package com.ukhuwahmobile.app
 
 import android.app.Activity
 import android.content.Intent

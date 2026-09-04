@@ -728,7 +728,7 @@ class _BookCover extends StatelessWidget {
             ? Container(
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFF0B6EF3), Color(0xFF20B7D5)],
+                    colors: [Color(0xFF007A33), Color(0xFF39B54A)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),

@@ -12,6 +12,7 @@
         android:label="${appName}"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:allowBackup="false"
         android:fullBackupContent="@xml/backup_rules"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -53,13 +54,13 @@
             android:value="2" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="genpro_default" />
+            android:value="ukhuwah_default" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_stat_genpro" />
+            android:resource="@drawable/ic_stat_ukhuwah" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/genpro_notification" />
+            android:resource="@color/ukhuwah_notification" />
         <service
             android:name=".PjjForegroundService"
             android:exported="false"

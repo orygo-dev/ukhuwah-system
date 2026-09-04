@@ -1,4 +1,4 @@
-package com.genpro.app
+package com.ukhuwahmobile.app
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -28,7 +28,7 @@ class PjjForegroundService : Service() {
             Notification.Builder(this)
         }
         val notification = builder
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.drawable.ic_stat_ukhuwah)
             .setContentTitle("Kelas PJJ sedang berlangsung")
             .setContentText("Audio kelas tetap aktif saat aplikasi di latar belakang.")
             .setOngoing(true)

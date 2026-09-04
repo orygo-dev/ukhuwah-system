@@ -20,7 +20,7 @@ npm run dev
 
 Panduan production untuk Apache reverse proxy dan PM2 ada di
 `doc/deploy-aapanel-apache-pm2.md`. Project ini juga menyediakan
-`ecosystem.config.cjs` agar port PM2 jelas: default `3000`.
+`ecosystem.config.cjs` agar port PM2 jelas: default `3112`.
 
 ## Akun Demo (setelah seed)
 

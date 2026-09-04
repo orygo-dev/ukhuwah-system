@@ -1,7 +1,7 @@
 abstract final class AppConfig {
   static const baseUrl = String.fromEnvironment(
     'GURUSPACE_BASE_URL',
-    defaultValue: 'https://guruspaceai.cloud',
+    defaultValue: 'https://ukhuwahsystem.navalogi.id',
   );
 
   static const appName = 'GuruSpace';

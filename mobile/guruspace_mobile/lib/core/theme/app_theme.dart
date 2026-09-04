@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
 abstract final class AppColors {
-  static const blue = Color(0xFF204AD5);
-  static const blueDark = Color(0xFF123491);
-  static const blueBright = Color(0xFF2C7DE8);
-  static const blueSoft = Color(0xFFEEF4FF);
-  static const cyan = Color(0xFF0891B2);
-  static const navy = Color(0xFF101D3A);
-  static const canvas = Color(0xFFF7F9FC);
+  static const blue = Color(0xFF007A33);
+  static const blueDark = Color(0xFF0B5A26);
+  static const blueBright = Color(0xFF39B54A);
+  static const blueSoft = Color(0xFFE8F6EA);
+  static const cyan = Color(0xFF8DC63F);
+  static const navy = Color(0xFF0F2418);
+  static const canvas = Color(0xFFF5FAF6);
   static const muted = Color(0xFF667085);
   static const mutedLight = Color(0xFF98A2B3);
-  static const border = Color(0xFFE4EAF2);
+  static const border = Color(0xFFD7E8D9);
   static const success = Color(0xFF0E9F6E);
   static const warning = Color(0xFFF59E0B);
   static const danger = Color(0xFFEF4444);
   static const violet = Color(0xFF7C3AED);
-  static const surfaceMuted = Color(0xFFF8FAFC);
+  static const surfaceMuted = Color(0xFFF7FBF7);
 }
 
 abstract final class AppRadii {
@@ -36,7 +36,7 @@ abstract final class AppShadows {
     BoxShadow(color: Color(0x0D101D3A), blurRadius: 18, offset: Offset(0, 6)),
   ];
   static const floating = [
-    BoxShadow(color: Color(0x24204AD5), blurRadius: 28, offset: Offset(0, 12)),
+    BoxShadow(color: Color(0x24007A33), blurRadius: 28, offset: Offset(0, 12)),
   ];
 }
 
@@ -45,7 +45,7 @@ abstract final class AppGradients {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
     stops: [0, .55, 1],
-    colors: [Color(0xFF123491), Color(0xFF204AD5), Color(0xFF2C7DE8)],
+    colors: [Color(0xFF0B5A26), Color(0xFF007A33), Color(0xFF39B54A)],
   );
 }
 

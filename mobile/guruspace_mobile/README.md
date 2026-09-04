@@ -21,10 +21,10 @@ Keduanya menggunakan autentikasi dan database yang sama dengan aplikasi web, seh
 flutter pub get
 
 # GenPro siswa
-flutter run --flavor student -t lib/main.dart --dart-define=GURUSPACE_BASE_URL=https://guruspaceai.cloud
+flutter run --flavor student -t lib/main.dart --dart-define=GURUSPACE_BASE_URL=https://ukhuwahsystem.navalogi.id
 
 # GenPro Guru
-flutter run --flavor teacher -t lib/main_teacher.dart --dart-define=GURUSPACE_BASE_URL=https://guruspaceai.cloud
+flutter run --flavor teacher -t lib/main_teacher.dart --dart-define=GURUSPACE_BASE_URL=https://ukhuwahsystem.navalogi.id
 ```
 
 Untuk backend lokal pada Android Emulator gunakan `http://10.0.2.2:3000`. Pada perangkat fisik gunakan alamat IP LAN komputer pengembang dan pastikan backend dapat diakses melalui jaringan yang sama.
@@ -35,8 +35,8 @@ Untuk backend lokal pada Android Emulator gunakan `http://10.0.2.2:3000`. Pada p
 flutter analyze
 flutter test
 
-flutter build apk --release --flavor student -t lib/main.dart --dart-define=GURUSPACE_BASE_URL=https://guruspaceai.cloud
-flutter build apk --release --flavor teacher -t lib/main_teacher.dart --dart-define=GURUSPACE_BASE_URL=https://guruspaceai.cloud
+flutter build apk --release --flavor student -t lib/main.dart --dart-define=GURUSPACE_BASE_URL=https://ukhuwahsystem.navalogi.id
+flutter build apk --release --flavor teacher -t lib/main_teacher.dart --dart-define=GURUSPACE_BASE_URL=https://ukhuwahsystem.navalogi.id
 ```
 
 Konfigurasi LiveKit tetap dilakukan oleh super admin pada aplikasi web. Aplikasi mobile hanya meminta token ruang untuk sesi PJJ yang memang dapat diakses pengguna.

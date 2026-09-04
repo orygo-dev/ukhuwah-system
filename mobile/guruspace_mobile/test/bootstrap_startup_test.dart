@@ -29,7 +29,8 @@ void main() {
       bootstrap.indexOf('runApp('),
       lessThan(bootstrap.indexOf('initializeDateFormatting')),
     );
-    expect(bootstrap, contains('GenPro belum dapat disiapkan.'));
-    expect(bootstrap, contains("assets/branding/genpro_logo_full.png"));
+    expect(bootstrap, contains('UKHUWAH Mobile belum dapat disiapkan.'));
+    expect(bootstrap, contains("assets/images/native_splash_logo.png"));
+    expect(bootstrap, contains("Powered by iBaenk's"));
   });
 }

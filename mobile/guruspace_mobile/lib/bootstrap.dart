@@ -71,10 +71,10 @@ class _BootstrapRootState extends State<_BootstrapRoot> {
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light,
           home: Scaffold(
-            backgroundColor: const Color(0xFFF8FBFF),
-            body: Center(
-              child: snapshot.hasError
-                  ? Padding(
+            backgroundColor: Colors.white,
+            body: snapshot.hasError
+                ? Center(
+                    child: Padding(
                       padding: const EdgeInsets.all(28),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -82,21 +82,23 @@ class _BootstrapRootState extends State<_BootstrapRoot> {
                           const Icon(
                             Icons.cloud_off_rounded,
                             size: 48,
-                            color: Color(0xFF1677FF),
+                            color: Color(0xFF007A33),
                           ),
                           const SizedBox(height: 16),
                           const Text(
-                            'GenPro belum dapat disiapkan.',
+                            'UKHUWAH Mobile belum dapat disiapkan.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w800,
+                              color: Color(0xFF0F2418),
                             ),
                           ),
                           const SizedBox(height: 8),
                           const Text(
                             'Tutup aplikasi, buka kembali, lalu coba lagi.',
                             textAlign: TextAlign.center,
+                            style: TextStyle(color: Color(0xFF5E6F5E)),
                           ),
                           const SizedBox(height: 20),
                           FilledButton.icon(
@@ -106,17 +108,43 @@ class _BootstrapRootState extends State<_BootstrapRoot> {
                           ),
                         ],
                       ),
-                    )
-                  : Image.asset(
-                      'assets/branding/genpro_logo_full.png',
-                      width: 190,
-                      errorBuilder: (_, _, _) => const SizedBox(
-                        width: 32,
-                        height: 32,
-                        child: CircularProgressIndicator(strokeWidth: 3),
-                      ),
                     ),
-            ),
+                  )
+                : SafeArea(
+                    child: Column(
+                      children: [
+                        const Spacer(),
+                        Center(
+                          child: Image.asset(
+                            'assets/images/native_splash_logo.png',
+                            width: 280,
+                            errorBuilder: (_, _, _) => const SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 3,
+                                color: Color(0xFF39B54A),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Spacer(),
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 24),
+                          child: Text(
+                            "Powered by iBaenk's",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF5E6F5E),
+                              fontSize: 12,
+                              letterSpacing: 1.4,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
           ),
         );
       },

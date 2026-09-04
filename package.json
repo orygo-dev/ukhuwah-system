@@ -13,6 +13,7 @@
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
     "db:seed": "npx tsx prisma/seed.ts",
+    "db:seed:marketplace": "npx tsx prisma/seed-marketplace.ts",
     "db:seed:tka": "npx tsx scripts/seed-tka.ts",
     "db:seed:reading": "npx tsx scripts/seed-reading.ts",
     "db:import:kalsel-schools": "npx tsx scripts/import-kalsel-schools.ts",

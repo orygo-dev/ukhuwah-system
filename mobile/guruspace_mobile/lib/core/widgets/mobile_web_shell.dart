@@ -73,7 +73,7 @@ class _BrandMark extends StatelessWidget {
         shape: BoxShape.circle,
         boxShadow: const [
           BoxShadow(
-            color: Color(0x33204AD5),
+            color: Color(0x33007A33),
             blurRadius: 12,
             offset: Offset(0, 4),
           ),
@@ -246,7 +246,7 @@ class MobileWebBottomNav extends StatelessWidget {
                             boxShadow: item.primary
                                 ? const [
                                     BoxShadow(
-                                      color: Color(0x52204AD5),
+                                      color: Color(0x52007A33),
                                       blurRadius: 22,
                                       offset: Offset(0, 10),
                                     ),

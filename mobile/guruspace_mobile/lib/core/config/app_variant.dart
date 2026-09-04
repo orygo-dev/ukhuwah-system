@@ -17,15 +17,15 @@ class AppVariant {
 
   static const student = AppVariant._(
     audience: AppAudience.student,
-    displayName: 'GenPro',
-    packageId: 'com.genpro.app',
+    displayName: 'UKHUWAH Mobile',
+    packageId: 'com.ukhuwahmobile.app',
     requiredRole: UserRole.student,
   );
 
   static const teacher = AppVariant._(
     audience: AppAudience.teacher,
-    displayName: 'GenPro Guru',
-    packageId: 'com.genpro.teacher',
+    displayName: 'UKHUWAH Mobile Guru',
+    packageId: 'com.ukhuwahmobile.teacher',
     requiredRole: UserRole.teacher,
   );
 
@@ -38,8 +38,8 @@ class AppVariant {
       _ => 'yang tidak didukung',
     };
     final targetApp = audience == AppAudience.student
-        ? 'GenPro Guru'
-        : 'GenPro';
+        ? 'UKHUWAH Mobile Guru'
+        : 'UKHUWAH Mobile';
     return 'Akun ini adalah akun $accountType. Silakan masuk melalui aplikasi $targetApp.';
   }
 }

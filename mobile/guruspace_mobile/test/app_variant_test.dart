@@ -4,12 +4,12 @@ import 'package:guruspace_mobile/features/auth/domain/app_user.dart';
 
 void main() {
   test('identitas aplikasi siswa dan guru terpisah', () {
-    expect(AppVariant.student.displayName, 'GenPro');
-    expect(AppVariant.student.packageId, 'com.genpro.app');
+    expect(AppVariant.student.displayName, 'UKHUWAH Mobile');
+    expect(AppVariant.student.packageId, 'com.ukhuwahmobile.app');
     expect(AppVariant.student.requiredRole, UserRole.student);
 
-    expect(AppVariant.teacher.displayName, 'GenPro Guru');
-    expect(AppVariant.teacher.packageId, 'com.genpro.teacher');
+    expect(AppVariant.teacher.displayName, 'UKHUWAH Mobile Guru');
+    expect(AppVariant.teacher.packageId, 'com.ukhuwahmobile.teacher');
     expect(AppVariant.teacher.requiredRole, UserRole.teacher);
   });
 
@@ -23,11 +23,11 @@ void main() {
   test('pesan salah aplikasi mengarahkan ke aplikasi yang benar', () {
     expect(
       AppVariant.student.wrongRoleMessage(UserRole.teacher),
-      contains('GenPro Guru'),
+      contains('UKHUWAH Mobile Guru'),
     );
     expect(
       AppVariant.teacher.wrongRoleMessage(UserRole.student),
-      contains('GenPro'),
+      contains('UKHUWAH Mobile'),
     );
   });
 }

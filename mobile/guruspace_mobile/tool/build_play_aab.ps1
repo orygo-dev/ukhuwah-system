@@ -12,7 +12,7 @@
 param(
   [ValidateSet("student", "teacher", "all")]
   [string]$Flavor = "student",
-  [string]$BaseUrl = "https://guruspaceai.cloud",
+  [string]$BaseUrl = "https://ukhuwahsystem.navalogi.id",
   [string]$BuildName = "1.0.3",
   [int]$BuildNumber = 6
 )

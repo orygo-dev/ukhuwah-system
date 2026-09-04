@@ -29,6 +29,12 @@ const REQUIRED_TABLES = [
   "live_class_quiz_attempts",
   "live_class_quiz_answers",
   "push_device_tokens",
+  "merchant_stores",
+  "marketplace_products",
+  "marketplace_cart_items",
+  "marketplace_orders",
+  "marketplace_sub_orders",
+  "marketplace_order_items",
 ];
 
 async function columnExists(table: string, column: string): Promise<boolean> {

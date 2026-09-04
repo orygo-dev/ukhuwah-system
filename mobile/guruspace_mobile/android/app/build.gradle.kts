@@ -48,7 +48,7 @@ if (requestedTasks.contains("release")) {
 }
 
 android {
-    namespace = "com.genpro.app"
+    namespace = "com.ukhuwahmobile.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -65,12 +65,12 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.genpro.app"
+        applicationId = "com.ukhuwahmobile.app"
         minSdk = 24
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        manifestPlaceholders["appName"] = "GenPro"
+        manifestPlaceholders["appName"] = "UKHUWAH Mobile"
     }
 
     signingConfigs {
@@ -87,14 +87,14 @@ android {
     productFlavors {
         create("student") {
             dimension = "audience"
-            applicationId = "com.genpro.app"
-            manifestPlaceholders["appName"] = "GenPro"
+            applicationId = "com.ukhuwahmobile.app"
+            manifestPlaceholders["appName"] = "UKHUWAH Mobile"
             manifestPlaceholders["admobAppId"] = studentAdmobAppId ?: admobTestAppId
         }
         create("teacher") {
             dimension = "audience"
-            applicationId = "com.genpro.teacher"
-            manifestPlaceholders["appName"] = "GenPro Guru"
+            applicationId = "com.ukhuwahmobile.teacher"
+            manifestPlaceholders["appName"] = "UKHUWAH Mobile Guru"
             manifestPlaceholders["admobAppId"] = teacherAdmobAppId ?: admobTestAppId
         }
     }

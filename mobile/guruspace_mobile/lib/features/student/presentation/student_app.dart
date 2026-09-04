@@ -651,7 +651,7 @@ class _StudentHeaderLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     final logoUrl = branding?.logoUrl.trim() ?? '';
     final fallback = Image.asset(
-      'assets/images/native_splash_logo.png',
+      'assets/images/app_launcher_icon.png',
       fit: BoxFit.contain,
       alignment: Alignment.centerLeft,
       filterQuality: FilterQuality.high,

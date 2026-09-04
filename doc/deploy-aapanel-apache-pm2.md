@@ -25,8 +25,8 @@ Contoh clone pertama kali:
 
 ```bash
 cd /www/wwwroot
-git clone <URL_REPOSITORY_ANDA> guruspace
-cd /www/wwwroot/guruspace
+git clone <URL_REPOSITORY_ANDA> ukhuwah-system
+cd /www/wwwroot/ukhuwah-system
 ```
 
 Jika sebelumnya project sudah diupload manual, jadikan folder server sebagai working copy Git atau clone ulang ke folder baru, lalu pindahkan file `.env` dan folder upload produksi.
@@ -45,7 +45,7 @@ public/uploads
 Buat file `.env` di root project:
 
 ```bash
-cd /www/wwwroot/guruspace
+cd /www/wwwroot/ukhuwah-system
 cp .env.example .env
 nano .env
 ```
@@ -65,17 +65,25 @@ Isi juga API key AI, payment gateway, WhatsApp gateway, dan konfigurasi lain ses
 ## 4. Install Dependency dan Database
 
 ```bash
-cd /www/wwwroot/guruspace
+cd /www/wwwroot/ukhuwah-system
 npm ci
 npx prisma generate
 npx prisma migrate deploy
 ```
 
-Jika server baru dan butuh data awal:
+`migrate deploy` hanya membuat tabel yang ada di `prisma/migrations`. Schema lokal yang disinkronkan dengan `npm run db:push` **tidak** ikut ke server. Jika log PM2 memuat `P2021` / `does not exist in the current database`, sinkronkan schema ke MySQL produksi:
 
 ```bash
-npm run db:seed
+npx prisma db push
 ```
+
+Jika server baru dan butuh akun demo (bukan data dari komputer lokal), seed **sekali** dengan flag eksplisit. Tanpa flag ini `npm run db:seed` langsung gagal:
+
+```bash
+ALLOW_DEMO_SEED=true npx tsx prisma/seed.ts
+```
+
+Setelah itu set `ALLOW_DEMO_SEED=false` di `.env` produksi. Data guru dari MySQL lokal tidak ikut terupload; salin dengan `mysqldump` jika itu yang dibutuhkan.
 
 ## 5. Build Production
 
@@ -92,7 +100,7 @@ npm run build
 
 ## 6. Jalankan dengan PM2
 
-Gunakan port internal, misalnya `3000`:
+Gunakan port internal `3112`:
 
 ```bash
 pm2 start ecosystem.config.cjs
@@ -104,13 +112,13 @@ Cek status:
 
 ```bash
 pm2 status
-pm2 logs guruspace
+pm2 logs ukhuwah-system
 ```
 
 Restart setelah update:
 
 ```bash
-pm2 restart guruspace
+pm2 restart ukhuwah-system
 ```
 
 Port PM2 ditentukan di `ecosystem.config.cjs`:
@@ -118,7 +126,7 @@ Port PM2 ditentukan di `ecosystem.config.cjs`:
 ```js
 env: {
   NODE_ENV: "production",
-  PORT: "3000",
+  PORT: "3112",
 }
 ```
 
@@ -126,9 +134,9 @@ Jika aaPanel PM2 Manager meminta form manual, isi seperti ini:
 
 | Kolom aaPanel | Isi |
 | --- | --- |
-| Startup file | `/www/wwwroot/guruspaceai.cloud/guruspaceai.cloud/ecosystem.config.cjs` |
-| Run dir | `/www/wwwroot/guruspaceai.cloud/guruspaceai.cloud` |
-| Name | `guruspace` |
+| Startup file | `/www/wwwroot/ukhuwahsystem.navalogi.id/ecosystem.config.cjs` |
+| Run dir | `/www/wwwroot/ukhuwahsystem.navalogi.id` |
+| Name | `ukhuwah-system` |
 | Balance | `1` |
 | MAX RAM | `1024` |
 | User | `www` atau user server yang memang memiliki akses folder project |
@@ -148,8 +156,8 @@ Di aaPanel:
 ProxyPreserveHost On
 ProxyRequests Off
 
-ProxyPass / http://127.0.0.1:3000/
-ProxyPassReverse / http://127.0.0.1:3000/
+ProxyPass / http://127.0.0.1:3112/
+ProxyPassReverse / http://127.0.0.1:3112/
 
 RequestHeader set X-Forwarded-Proto "https"
 RequestHeader set X-Forwarded-Port "443"
@@ -168,7 +176,7 @@ ssl
 Jika aaPanel menyediakan menu Reverse Proxy, bisa juga arahkan domain ke:
 
 ```text
-http://127.0.0.1:3000
+http://127.0.0.1:3112
 ```
 
 ## 8. SSL
@@ -186,7 +194,7 @@ NEXT_PUBLIC_APP_URL="https://domainanda.com"
 Lalu restart:
 
 ```bash
-pm2 restart guruspace
+pm2 restart ukhuwah-system
 ```
 
 ## 9. Checklist Setelah Deploy
@@ -202,7 +210,7 @@ Cek dari server:
 
 ```bash
 curl -I https://domainanda.com/login
-pm2 logs guruspace --lines 100
+pm2 logs ukhuwah-system --lines 100
 ```
 
 Login akun admin, lalu cek:
@@ -228,20 +236,20 @@ Login akun guru, lalu cek:
 Update normal:
 
 ```bash
-cd /www/wwwroot/guruspace
+cd /www/wwwroot/ukhuwah-system
 git pull
 npm ci
 npx prisma generate
 npx prisma migrate deploy
 npm run db:reconcile-check
 npm run build
-pm2 restart ecosystem.config.cjs --only guruspace
+pm2 restart ecosystem.config.cjs --only ukhuwah-system
 ```
 
 Update lebih aman dengan backup titik commit:
 
 ```bash
-cd /www/wwwroot/guruspace
+cd /www/wwwroot/ukhuwah-system
 git status
 git rev-parse --short HEAD
 git pull
@@ -250,19 +258,19 @@ npx prisma generate
 npx prisma migrate deploy
 npm run db:reconcile-check
 npm run build
-pm2 restart ecosystem.config.cjs --only guruspace
+pm2 restart ecosystem.config.cjs --only ukhuwah-system
 ```
 
 Jika update bermasalah dan perlu rollback ke commit sebelumnya:
 
 ```bash
-cd /www/wwwroot/guruspace
+cd /www/wwwroot/ukhuwah-system
 git log --oneline -5
 git reset --hard <COMMIT_SEBELUM_UPDATE>
 npm ci
 npx prisma generate
 npm run build
-pm2 restart ecosystem.config.cjs --only guruspace
+pm2 restart ecosystem.config.cjs --only ukhuwah-system
 ```
 
 **Penting:** Jangan memakai `prisma db push` di produksi. Gunakan `prisma migrate deploy` agar history migrasi dan skema tetap selaras. Jika `migrate status` bilang up to date tetapi kolom/tabel hilang (P2022), ikuti `docs/DB_RECONCILE_CHECKLIST.md`.
@@ -279,17 +287,17 @@ Catatan penting:
 Jika halaman putih, CSS hilang, atau chunk error:
 
 ```bash
-pm2 stop guruspace
+pm2 stop ukhuwah-system
 rm -rf .next tsconfig.tsbuildinfo
 npm run build
-pm2 restart guruspace
+pm2 restart ukhuwah-system
 ```
 
-Jika port 3000 bentrok:
+Jika port 3112 bentrok:
 
 ```bash
-pm2 delete guruspace
-sed -i 's/PORT: "3000"/PORT: "3001"/' ecosystem.config.cjs
+pm2 delete ukhuwah-system
+sed -i 's/PORT: "3112"/PORT: "3113"/' ecosystem.config.cjs
 pm2 start ecosystem.config.cjs
 pm2 save
 ```
@@ -297,8 +305,8 @@ pm2 save
 Lalu ubah Apache reverse proxy ke port baru:
 
 ```apache
-ProxyPass / http://127.0.0.1:3001/
-ProxyPassReverse / http://127.0.0.1:3001/
+ProxyPass / http://127.0.0.1:3113/
+ProxyPassReverse / http://127.0.0.1:3113/
 ```
 
 Jika login callback error, cek:

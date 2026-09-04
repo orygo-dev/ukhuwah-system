@@ -46,9 +46,7 @@ class _AuthGateState extends ConsumerState<_AuthGate> {
     final variant = ref.watch(appVariantProvider);
 
     if (auth.status == AuthStatus.authenticated && auth.user != null) {
-      final appId = variant.audience == AppAudience.student
-          ? 'com.genpro.app'
-          : 'com.genpro.teacher';
+      final appId = variant.packageId;
       unawaited(
         PushNotificationService.instance.syncAuthenticated(
           userId: auth.user!.id,

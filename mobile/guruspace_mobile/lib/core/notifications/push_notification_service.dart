@@ -22,7 +22,7 @@ class PushNotificationService {
 
   static final instance = PushNotificationService._();
   static const fallbackChannelId = 'genpro_default';
-  static const _notificationColor = Color(0xFF0B6EF3);
+  static const _notificationColor = Color(0xFF007A33);
   static const _largeIcon = DrawableResourceAndroidBitmap(
     'ic_notification_logo',
   );

@@ -97,6 +97,7 @@ flutter:
           weight: 800
 
   assets:
+    - assets/images/login_background.jpg
     - assets/images/splash_background.png
     - assets/images/native_splash_logo.png
     - assets/images/logo_genpro.png
@@ -106,6 +107,7 @@ flutter:
     - assets/images/student_home_banner.png
     - assets/images/student_home_banner_science.png
     - assets/images/student_home_banner_creative.png
+    - assets/branding/ukhuwah_mobile_icon.png
     - assets/branding/genpro_splash_g.png
     - assets/branding/genpro_g_raw.png
     - assets/branding/genpro_logo_full.png

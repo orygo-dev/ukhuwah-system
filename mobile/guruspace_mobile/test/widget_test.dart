@@ -173,7 +173,7 @@ void main() {
     );
   });
 
-  testWidgets('splash GenPro premium timeline selesai lalu exit', (
+  testWidgets('splash UKHUWAH selesai lalu exit', (
     tester,
   ) async {
     tester.view.physicalSize = const Size(412, 915);
@@ -189,31 +189,19 @@ void main() {
     expect(find.byKey(const Key('genpro-splash')), findsOneWidget);
     expect(
       tester.widget<Scaffold>(find.byType(Scaffold)).backgroundColor,
-      Colors.white,
+      const Color(0xFFFFFFFF),
     );
+    expect(find.byKey(const Key('splash-powered-by')), findsOneWidget);
+    expect(find.text("Powered by iBaenk's"), findsOneWidget);
 
     final splashContext = tester.element(
       find.byKey(const Key('genpro-splash')),
     );
     await tester.runAsync(
-      () => Future.wait([
-        precacheImage(
-          const AssetImage(GenProSplashScreen.gAsset),
-          splashContext,
-        ),
-        precacheImage(
-          const AssetImage(GenProSplashScreen.wordmarkAsset),
-          splashContext,
-        ),
-        precacheImage(
-          const AssetImage(GenProSplashScreen.raysAsset),
-          splashContext,
-        ),
-        precacheImage(
-          const AssetImage(GenProSplashScreen.smileAsset),
-          splashContext,
-        ),
-      ]),
+      () => precacheImage(
+        const AssetImage(GenProSplashScreen.logoAsset),
+        splashContext,
+      ),
     );
     await tester.pump();
     await tester.pump(GenProSplashScreen.duration);
@@ -343,7 +331,7 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('logo GuruSpace tampil pada design system', (tester) async {
+  testWidgets('logo UKHUWAH tampil pada design system', (tester) async {
     await tester.pumpWidget(
       MaterialApp(
         theme: AppTheme.light,
@@ -351,8 +339,7 @@ void main() {
       ),
     );
 
-    expect(find.text('GuruSpace'), findsOneWidget);
-    expect(find.byIcon(Icons.school_rounded), findsOneWidget);
+    expect(find.text('UKHUWAH'), findsOneWidget);
   });
 
   testWidgets('shell siswa memakai identitas dan navigasi komersial', (
@@ -2158,7 +2145,7 @@ void main() {
     await tester.pump();
     await tester.runAsync(() async {
       await precacheImage(
-        const AssetImage('assets/images/splash_background.png'),
+        const AssetImage('assets/images/login_background.jpg'),
         tester.element(find.byType(LoginPageView)),
       );
     });

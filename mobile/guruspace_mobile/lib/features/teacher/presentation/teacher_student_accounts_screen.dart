@@ -273,12 +273,12 @@ class _AccountSummary extends StatelessWidget {
       gradient: const LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
-        colors: [Color(0xFF123491), Color(0xFF2C7DE8)],
+        colors: [Color(0xFF0B5A26), Color(0xFF39B54A)],
       ),
       borderRadius: BorderRadius.circular(24),
       boxShadow: const [
         BoxShadow(
-          color: Color(0x30204AD5),
+          color: Color(0x30007A33),
           blurRadius: 24,
           offset: Offset(0, 10),
         ),
