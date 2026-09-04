@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "609928455259",
+    "project_id": "genpro-3cec6",
+    "storage_bucket": "genpro-3cec6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609928455259:android:f43cc74e38136d596b0b7e",
+        "android_client_info": {
+          "package_name": "com.example.genpro_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNy4MhyfPQMwJHqVa0O98wqV7MIUqe1wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609928455259:android:e533f8c1c1cf207b6b0b7e",
+        "android_client_info": {
+          "package_name": "com.genpro.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNy4MhyfPQMwJHqVa0O98wqV7MIUqe1wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609928455259:android:e533f8c1c1cf207b6b0b7e",
+        "android_client_info": {
+          "package_name": "com.genpro.teacher"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNy4MhyfPQMwJHqVa0O98wqV7MIUqe1wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

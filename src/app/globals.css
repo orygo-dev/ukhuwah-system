@@ -1,0 +1,153 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    font-size: 14px;
+    --background: 150 33% 98%;
+    --foreground: 168 32% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 168 32% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 168 32% 12%;
+    --primary: 160 84% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 152 32% 95%;
+    --secondary-foreground: 168 32% 12%;
+    --muted: 152 20% 95%;
+    --muted-foreground: 168 12% 38%;
+    --accent: 166 64% 36%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 152 18% 88%;
+    --input: 152 18% 88%;
+    --ring: 160 84% 32%;
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 168 28% 7%;
+    --foreground: 150 25% 96%;
+    --card: 168 24% 10%;
+    --card-foreground: 150 25% 96%;
+    --popover: 168 24% 10%;
+    --popover-foreground: 150 25% 96%;
+    --primary: 160 70% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 166 20% 16%;
+    --secondary-foreground: 150 25% 96%;
+    --muted: 166 20% 16%;
+    --muted-foreground: 155 14% 68%;
+    --accent: 166 55% 42%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 166 18% 18%;
+    --input: 166 18% 18%;
+    --ring: 160 70% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "cv02" 1,
+      "cv03" 1,
+      "cv04" 1,
+      "cv11" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-brand {
+    background: linear-gradient(
+      145deg,
+      hsl(166 58% 22%) 0%,
+      hsl(160 72% 34%) 48%,
+      hsl(152 70% 42%) 100%
+    );
+  }
+
+  .gradient-brand-card {
+    background: linear-gradient(
+      155deg,
+      hsl(168 52% 20%) 0%,
+      hsl(160 70% 32%) 55%,
+      hsl(150 68% 40%) 100%
+    );
+  }
+
+  .gradient-brand-soft {
+    background: linear-gradient(
+      90deg,
+      hsl(152 60% 97%) 0%,
+      hsl(160 50% 93%) 100%
+    );
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(166 58% 28%) 0%, hsl(152 70% 38%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .mobile-bottom-nav {
+    box-shadow: 0 -4px 24px -4px hsl(222 47% 11% / 0.08);
+  }
+
+  .dark .mobile-bottom-nav {
+    box-shadow: 0 -4px 24px -4px hsl(0 0% 0% / 0.35);
+  }
+
+  .mobile-app-header {
+    box-shadow:
+      0 1px 0 hsl(var(--border) / 0.8),
+      0 4px 20px -6px hsl(222 47% 11% / 0.08);
+  }
+
+  .dark .mobile-app-header {
+    box-shadow:
+      0 1px 0 hsl(var(--border)),
+      0 4px 20px -6px hsl(0 0% 0% / 0.35);
+  }
+}
+
+@layer components {
+  .admin-surface table {
+    @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_10px_28px_rgba(15,23,42,0.05)];
+  }
+
+  .admin-surface thead tr {
+    @apply border-b border-slate-200 bg-slate-100/90;
+  }
+
+  .admin-surface th {
+    @apply px-4 py-3 text-xs font-extrabold uppercase tracking-wide text-slate-500;
+  }
+
+  .admin-surface td {
+    @apply px-4 py-3 text-sm text-slate-700;
+  }
+
+  .admin-surface tbody tr {
+    @apply border-b border-slate-100 bg-white transition-colors last:border-b-0 hover:bg-emerald-50/40;
+  }
+}

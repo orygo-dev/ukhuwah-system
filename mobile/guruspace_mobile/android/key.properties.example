@@ -1,0 +1,9 @@
+# Copy this file to key.properties and fill in real values.
+# key.properties is gitignored — never commit secrets.
+#
+# storeFile is relative to android/app/
+
+storePassword=CHANGE_ME
+keyPassword=CHANGE_ME
+keyAlias=upload
+storeFile=upload-keystore.p12

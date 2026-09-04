@@ -1,0 +1,7 @@
+# Copy to admob.properties (gitignored) and fill real App IDs from AdMob Console.
+# Format: ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY
+#
+# AdMob Console -> Apps -> select app -> App settings -> App ID
+
+ADMOB_STUDENT_APP_ID=ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY
+ADMOB_TEACHER_APP_ID=ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY
