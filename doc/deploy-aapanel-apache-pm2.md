@@ -312,6 +312,6 @@ ProxyPassReverse / http://127.0.0.1:3113/
 Jika login callback error, cek:
 
 - `AUTH_SECRET` sudah ada.
-- `AUTH_URL` dan `NEXTAUTH_URL` sama dengan domain HTTPS.
+- `AUTH_URL` dan `NEXTAUTH_URL` sama dengan domain HTTPS publik, misalnya `https://ukhuwahsystem.navalogi.id`. Jangan isi `localhost` atau `127.0.0.1` — itu membuat cookie Auth.js mengarah ke mesin server, lalu aplikasi Android gagal terhubung ke API.
 - Jam server benar.
 - Cookie tidak diblokir oleh konfigurasi proxy.

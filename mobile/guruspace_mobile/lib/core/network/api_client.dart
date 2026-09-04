@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
+import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:guruspace_mobile/core/config/app_config.dart';
 import 'package:guruspace_mobile/core/network/api_exception.dart';
@@ -16,24 +17,33 @@ class ApiClient {
   static const maxEbookBytes = 90 * 1024 * 1024;
 
   static Future<ApiClient> create() async {
-    final directory = await getApplicationSupportDirectory();
     final cookieJar = PersistCookieJar(
       ignoreExpires: false,
       storage: SecureCookieStorage(),
     );
     final baseUri = validatedAppBaseUri();
-    await _migrateLegacyCookies(
-      cookieJar,
-      FileStorage('${directory.path}/auth_cookies'),
-      baseUri,
-    );
+    try {
+      final directory = await getApplicationSupportDirectory();
+      await _migrateLegacyCookies(
+        cookieJar,
+        FileStorage('${directory.path}/auth_cookies'),
+        baseUri,
+      );
+    } catch (error, stackTrace) {
+      debugPrint('Legacy cookie migration skipped: $error');
+      debugPrintStack(stackTrace: stackTrace);
+    }
     final dio = Dio(
       BaseOptions(
         baseUrl: baseUri.toString(),
         connectTimeout: const Duration(seconds: 20),
         sendTimeout: const Duration(seconds: 30),
         receiveTimeout: const Duration(seconds: 30),
-        headers: const {'Accept': 'application/json'},
+        followRedirects: false,
+        headers: const {
+          'Accept': 'application/json',
+          'User-Agent': 'UkhuwahMobile/1.0',
+        },
         validateStatus: (status) => status != null && status < 500,
       ),
     );

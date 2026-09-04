@@ -94,6 +94,13 @@ test("public school directory is bounded and does not load every region initiall
   assert.match(directory, /where: provinceId \? \{ provinceId \} : \{ id: \{ in: \[\] \} \}/);
 });
 
+test("production ignores loopback AUTH_URL so mobile cookies stay on the public host", () => {
+  const auth = read("src/lib/auth.ts");
+  assert.match(auth, /function discardLoopbackAuthUrl/);
+  assert.match(auth, /delete process\.env\[key\]/);
+  assert.match(auth, /trustHost:\s*true/);
+});
+
 test("Android release and session storage fail closed", () => {
   const gradle = read("mobile/guruspace_mobile/android/app/build.gradle.kts");
   const manifest = read("mobile/guruspace_mobile/android/app/src/main/AndroidManifest.xml");

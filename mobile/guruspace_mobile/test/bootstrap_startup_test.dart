@@ -33,4 +33,14 @@ void main() {
     expect(bootstrap, contains("assets/images/native_splash_logo.png"));
     expect(bootstrap, contains("Powered by iBaenk's"));
   });
+
+  test('API client starts even if path_provider JNI fails', () {
+    final apiClient = File('lib/core/network/api_client.dart').readAsStringSync();
+    expect(apiClient, contains('Legacy cookie migration skipped'));
+    expect(apiClient, contains('followRedirects: false'));
+    expect(
+      apiClient.indexOf('PersistCookieJar('),
+      lessThan(apiClient.indexOf('getApplicationSupportDirectory()')),
+    );
+  });
 }

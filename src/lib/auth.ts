@@ -10,6 +10,30 @@ import {
   consumeSecurityRateLimit,
 } from "@/lib/security-rate-limit";
 
+/** Auth.js AUTH_URL=localhost makes Android follow cookies/redirects to 127.0.0.1. */
+function discardLoopbackAuthUrl() {
+  if (process.env.NODE_ENV !== "production") return;
+  for (const key of ["AUTH_URL", "NEXTAUTH_URL"] as const) {
+    const raw = process.env[key]?.trim();
+    if (!raw) continue;
+    try {
+      const hostname = new URL(raw).hostname.toLowerCase();
+      if (
+        hostname === "localhost" ||
+        hostname === "127.0.0.1" ||
+        hostname === "::1" ||
+        hostname === "[::1]"
+      ) {
+        delete process.env[key];
+      }
+    } catch {
+      delete process.env[key];
+    }
+  }
+}
+
+discardLoopbackAuthUrl();
+
 declare module "next-auth" {
   interface User {
     role: UserRole;
