@@ -12,10 +12,10 @@ import 'package:guruspace_mobile/features/spotlight/domain/spotlight_share.dart'
 import 'package:guruspace_mobile/features/spotlight/presentation/teacher_spotlight_screen.dart';
 import 'package:guruspace_mobile/features/student/presentation/student_inbox_screen.dart';
 
-const _blue = Color(0xFF1677FF);
-const _cyan = Color(0xFF19C3E6);
-const _navy = Color(0xFF102342);
-const _canvas = Color(0xFFF5F8FD);
+const _blue = Color(0xFF007A33);
+const _cyan = Color(0xFF39B54A);
+const _navy = Color(0xFF0F2418);
+const _canvas = Color(0xFFF5FAF6);
 
 final _creatorNavigationLocks = Expando<bool>();
 final _creatorPreviewNavigationLocks = Expando<bool>();
@@ -271,7 +271,7 @@ class _ProfileHeroState extends ConsumerState<_ProfileHero> {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Color(0xFF0756F6), _blue, _cyan],
+          colors: [Color(0xFF007A33), _blue, _cyan],
         ),
         boxShadow: [
           BoxShadow(
@@ -351,7 +351,7 @@ class _ProfileHeroState extends ConsumerState<_ProfileHero> {
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.right,
                           style: const TextStyle(
-                            color: Color(0xFFE8F7FF),
+                            color: Color(0xFFE8F6EA),
                             fontSize: 12.5,
                             fontWeight: FontWeight.w700,
                           ),
@@ -363,7 +363,7 @@ class _ProfileHeroState extends ConsumerState<_ProfileHero> {
                           child: Text(
                             '·',
                             style: TextStyle(
-                              color: Color(0xFFE8F7FF),
+                              color: Color(0xFFE8F6EA),
                               fontWeight: FontWeight.w900,
                             ),
                           ),
@@ -375,7 +375,7 @@ class _ProfileHeroState extends ConsumerState<_ProfileHero> {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
-                              color: Color(0xFFE8F7FF),
+                              color: Color(0xFFE8F6EA),
                               fontSize: 12.5,
                               fontWeight: FontWeight.w700,
                             ),
@@ -419,9 +419,9 @@ class _ProfileHeroState extends ConsumerState<_ProfileHero> {
                               style: FilledButton.styleFrom(
                                 backgroundColor: profile.social.following
                                     ? Colors.white
-                                    : const Color(0xFF0756F6),
+                                    : const Color(0xFF007A33),
                                 foregroundColor: profile.social.following
-                                    ? const Color(0xFF0756F6)
+                                    ? const Color(0xFF007A33)
                                     : Colors.white,
                               ),
                               child: Text(
@@ -449,7 +449,7 @@ class _ProfileHeroState extends ConsumerState<_ProfileHero> {
                               ),
                               style: OutlinedButton.styleFrom(
                                 backgroundColor: Colors.white,
-                                foregroundColor: const Color(0xFF0756F6),
+                                foregroundColor: const Color(0xFF007A33),
                               ),
                             ),
                           ),
@@ -523,7 +523,7 @@ class _CompactMetric extends StatelessWidget {
         ),
         Text(
           label,
-          style: const TextStyle(color: Color(0xFFE8F7FF), fontSize: 10),
+          style: const TextStyle(color: Color(0xFFE8F6EA), fontSize: 10),
         ),
       ],
     ),
@@ -898,7 +898,7 @@ class _MadingArticle extends StatelessWidget {
               Text(
                 item.content,
                 style: const TextStyle(
-                  color: Color(0xFF34445D),
+                  color: Color(0xFF0F2418),
                   fontSize: 15.5,
                   height: 1.7,
                 ),
@@ -1148,7 +1148,7 @@ class _Metric extends StatelessWidget {
       Text(
         label,
         style: const TextStyle(
-          color: Color(0xFFE8F6FF),
+          color: Color(0xFFE8F6EA),
           fontSize: 11,
           fontWeight: FontWeight.w700,
         ),
@@ -1228,7 +1228,7 @@ class _LightLabel extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
     decoration: BoxDecoration(
-      color: const Color(0xFFEAF3FF),
+      color: const Color(0xFFE8F6EA),
       borderRadius: BorderRadius.circular(99),
     ),
     child: Text(

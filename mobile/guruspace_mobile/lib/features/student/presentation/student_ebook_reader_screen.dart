@@ -744,7 +744,7 @@ class _StudentEbookReaderScreenState
 
   Future<void> _showPdfSettings() => showModalBottomSheet<void>(
     context: context,
-    backgroundColor: const Color(0xFF101D31),
+    backgroundColor: const Color(0xFF0F2418),
     showDragHandle: true,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
@@ -1027,7 +1027,7 @@ class _ReaderLoading extends StatelessWidget {
           const Text(
             'Ebook disimpan sementara agar halaman berikutnya lebih cepat.',
             textAlign: TextAlign.center,
-            style: TextStyle(color: Color(0xFF98A8BE), height: 1.45),
+            style: TextStyle(color: Color(0xFF5E6F5E), height: 1.45),
           ),
           const SizedBox(height: 20),
           LinearProgressIndicator(

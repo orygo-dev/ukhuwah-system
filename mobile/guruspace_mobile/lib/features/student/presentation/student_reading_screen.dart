@@ -313,8 +313,8 @@ const _presetCategoryTiles = <_CategoryTile>[
   _CategoryTile(
     label: 'Fiksi',
     icon: Icons.menu_book_rounded,
-    accent: Color(0xFF2F6BFF),
-    soft: Color(0xFFE8F0FF),
+    accent: Color(0xFF007A33),
+    soft: Color(0xFFE8F6EA),
   ),
   _CategoryTile(
     label: 'Non-Fiksi',
@@ -337,8 +337,8 @@ const _presetCategoryTiles = <_CategoryTile>[
   _CategoryTile(
     label: 'Biografi',
     icon: Icons.person_rounded,
-    accent: Color(0xFF4338CA),
-    soft: Color(0xFFEEF0FF),
+    accent: Color(0xFF007A33),
+    soft: Color(0xFFE8F6EA),
   ),
 ];
 
@@ -394,7 +394,7 @@ class _CategoryCard extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(18),
               border: Border.all(
-                color: selected ? tile.accent : const Color(0xFFE8EDF5),
+                color: selected ? tile.accent : const Color(0xFFE8F6EA),
                 width: selected ? 1.6 : 1,
               ),
               boxShadow: [
@@ -510,7 +510,7 @@ class _ContinueReadingCard extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: const Color(0xFFE8EEF6)),
+          border: Border.all(color: const Color(0xFFD7E8D9)),
           boxShadow: const [
             BoxShadow(
               color: Color(0x120F172A),
@@ -560,7 +560,7 @@ class _ContinueReadingCard extends StatelessWidget {
                               child: LinearProgressIndicator(
                                 value: book.progress / 100,
                                 minHeight: 7,
-                                backgroundColor: const Color(0xFFE8EDF5),
+                                backgroundColor: const Color(0xFFE8F6EA),
                                 color: AppColors.blue,
                               ),
                             ),
@@ -762,7 +762,7 @@ class _ReadingRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Material(
-    color: const Color(0xFFF8FAFC),
+    color: const Color(0xFFF5FAF6),
     borderRadius: BorderRadius.circular(17),
     child: InkWell(
       onTap: onTap,
@@ -771,7 +771,7 @@ class _ReadingRow extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
-          border: Border.all(color: const Color(0xFFE8EEF5)),
+          border: Border.all(color: const Color(0xFFD7E8D9)),
         ),
         child: Row(
           children: [
@@ -807,7 +807,7 @@ class _ReadingRow extends StatelessWidget {
                             value: book.progress / 100,
                             minHeight: 5,
                             borderRadius: BorderRadius.circular(8),
-                            backgroundColor: const Color(0xFFE5EAF2),
+                            backgroundColor: const Color(0xFFD7E8D9),
                             color: AppColors.blue,
                           ),
                         ),
@@ -841,9 +841,9 @@ class _ReadingEmpty extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.symmetric(vertical: 48, horizontal: 22),
     decoration: BoxDecoration(
-      color: const Color(0xFFF8FAFC),
+      color: const Color(0xFFF5FAF6),
       borderRadius: BorderRadius.circular(19),
-      border: Border.all(color: const Color(0xFFE0E7F0)),
+      border: Border.all(color: const Color(0xFFD7E8D9)),
     ),
     child: Column(
       children: [

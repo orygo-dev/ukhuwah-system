@@ -95,7 +95,7 @@ class _TeacherSpotlightReportsScreenState
                   decoration: InputDecoration(
                     hintText: 'Catatan moderator (wajib jika disembunyikan)',
                     filled: true,
-                    fillColor: const Color(0xFFF7F9FC),
+                    fillColor: const Color(0xFFF5FAF6),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16),
                       borderSide: BorderSide.none,
@@ -205,7 +205,7 @@ class _TeacherSpotlightReportsScreenState
         .where((item) => (item['openReportCount'] as num? ?? 0) > 0)
         .toList();
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F8FD),
+      backgroundColor: const Color(0xFFF5FAF6),
       appBar: AppBar(
         title: const Text('Laporan Zona Kreasi'),
         actions: [

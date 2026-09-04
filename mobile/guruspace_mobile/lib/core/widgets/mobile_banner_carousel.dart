@@ -89,7 +89,7 @@ class _MobileBannerCarouselState extends State<MobileBannerCarousel> {
                     child: DecoratedBox(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18),
-                        border: Border.all(color: const Color(0xFFDBEAFE)),
+                        border: Border.all(color: const Color(0xFFE8F6EA)),
                         boxShadow: const [
                           BoxShadow(
                             color: Color(0x120F4C81),
@@ -174,7 +174,7 @@ class _MobileBannerCarouselState extends State<MobileBannerCarousel> {
                     decoration: BoxDecoration(
                       color: i == activeIndex
                           ? AppColors.blue
-                          : const Color(0xFFBFDBFE),
+                          : const Color(0xFFA7D4B0),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),

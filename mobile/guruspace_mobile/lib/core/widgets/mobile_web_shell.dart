@@ -313,7 +313,7 @@ class _StudentModernBottomNav extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white.withValues(alpha: .98),
         borderRadius: BorderRadius.circular(26),
-        border: Border.all(color: const Color(0xFFDDE7F7)),
+        border: Border.all(color: const Color(0xFFD7E8D9)),
         boxShadow: const [
           BoxShadow(
             color: Color(0x260B3679),
@@ -405,9 +405,9 @@ class _StudentPrimaryNavContent extends StatelessWidget {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  Color(0xFF1549D2),
-                  Color(0xFF2478F2),
-                  Color(0xFF13A9E8),
+                  Color(0xFF0B5A26),
+                  Color(0xFF007A33),
+                  Color(0xFF39B54A),
                 ],
               ),
               borderRadius: BorderRadius.circular(21),
@@ -415,7 +415,7 @@ class _StudentPrimaryNavContent extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: const Color(
-                    0xFF1764E7,
+                    0xFF007A33,
                   ).withValues(alpha: selected ? .46 : .32),
                   blurRadius: selected ? 25 : 18,
                   offset: const Offset(0, 10),
@@ -452,7 +452,7 @@ class _StudentPrimaryNavContent extends StatelessWidget {
         child: Text(
           item.label,
           style: TextStyle(
-            color: const Color(0xFF1657D5),
+            color: const Color(0xFF007A33),
             fontSize: 10.5,
             fontWeight: selected ? FontWeight.w900 : FontWeight.w800,
             letterSpacing: -.1,
@@ -479,14 +479,14 @@ class _StudentRegularNavContent extends StatelessWidget {
         width: 43,
         height: 34,
         decoration: BoxDecoration(
-          color: selected ? const Color(0xFFE8F1FF) : Colors.transparent,
+          color: selected ? const Color(0xFFE8F6EA) : Colors.transparent,
           borderRadius: BorderRadius.circular(13),
-          border: selected ? Border.all(color: const Color(0xFFC9DCFF)) : null,
+          border: selected ? Border.all(color: const Color(0xFFD7E8D9)) : null,
         ),
         child: Icon(
           item.resolvedIcon(selected),
           size: 22,
-          color: selected ? const Color(0xFF1558D5) : const Color(0xFF75839A),
+          color: selected ? const Color(0xFF007A33) : const Color(0xFF667085),
         ),
       ),
       const SizedBox(height: 3),
@@ -498,7 +498,7 @@ class _StudentRegularNavContent extends StatelessWidget {
         style: TextStyle(
           fontSize: 9.8,
           fontWeight: selected ? FontWeight.w900 : FontWeight.w600,
-          color: selected ? const Color(0xFF1558D5) : const Color(0xFF75839A),
+          color: selected ? const Color(0xFF007A33) : const Color(0xFF667085),
         ),
       ),
       AnimatedContainer(
@@ -507,7 +507,7 @@ class _StudentRegularNavContent extends StatelessWidget {
         width: selected ? 16 : 0,
         height: 3,
         decoration: BoxDecoration(
-          color: const Color(0xFF1A65E8),
+          color: const Color(0xFF007A33),
           borderRadius: BorderRadius.circular(99),
         ),
       ),

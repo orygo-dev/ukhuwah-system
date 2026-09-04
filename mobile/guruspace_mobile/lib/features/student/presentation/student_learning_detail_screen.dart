@@ -529,7 +529,7 @@ class _StudentLearningDetailScreenState
                   maxLines: 4,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    color: Color(0xFFDCE8FF),
+                    color: Color(0xFFE8F6EA),
                     fontSize: 13,
                     height: 1.5,
                   ),
@@ -591,7 +591,7 @@ class _StudentLearningDetailScreenState
                 ? const Color(0xFFFEF2F2)
                 : activity['isLate'] == true
                 ? const Color(0xFFFFFBEB)
-                : const Color(0xFFEFF6FF),
+                : const Color(0xFFE8F6EA),
             child: ListTile(
               leading: const Icon(Icons.schedule_rounded),
               title: Text(_formatDeadline(activity['dueAt'].toString())),
@@ -830,7 +830,7 @@ class _StudentLearningDetailScreenState
         const SizedBox(height: 12),
         if (submission?['score'] != null)
           Card(
-            color: const Color(0xFFEFF6FF),
+            color: const Color(0xFFE8F6EA),
             child: ListTile(
               leading: const Icon(
                 Icons.verified_rounded,
@@ -1074,7 +1074,7 @@ class _AssignmentQuestionCard extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 8),
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFEFF6FF),
+                  color: const Color(0xFFE8F6EA),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(

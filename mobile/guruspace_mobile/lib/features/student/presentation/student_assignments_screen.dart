@@ -31,7 +31,7 @@ class _StudentAssignmentsScreenState
     final dashboard = ref.watch(studentDashboardProvider);
     return Scaffold(
       key: const Key('student-assignments-page'),
-      backgroundColor: const Color(0xFFF7F9FD),
+      backgroundColor: const Color(0xFFF5FAF6),
       appBar: _LearningPageBar(
         title: 'Tugas',
         onBack: widget.onBack,
@@ -144,7 +144,7 @@ class _StudentAssignmentsScreenState
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(13),
-                    border: Border.all(color: const Color(0xFFDDE5F1)),
+                    border: Border.all(color: const Color(0xFFD7E8D9)),
                   ),
                   child: Row(
                     children: [
@@ -370,7 +370,7 @@ class _AssignmentSummary extends StatelessWidget {
                     SizedBox(height: 3),
                     Text(
                       'Selesaikan tugasmu tepat waktu',
-                      style: TextStyle(color: Color(0xFFDCE8FF), fontSize: 11),
+                      style: TextStyle(color: Color(0xFFE8F6EA), fontSize: 11),
                     ),
                   ],
                 ),
@@ -438,7 +438,7 @@ class _SummaryValue extends StatelessWidget {
         Text(
           label,
           style: const TextStyle(
-            color: Color(0xFFDCE8FF),
+            color: Color(0xFFE8F6EA),
             fontSize: 11,
             fontWeight: FontWeight.w700,
           ),
@@ -476,10 +476,10 @@ class _FilterChip extends StatelessWidget {
       selectedColor: AppColors.blue,
       backgroundColor: Colors.white,
       side: BorderSide(
-        color: selected ? AppColors.blue : const Color(0xFFDDE5F1),
+        color: selected ? AppColors.blue : const Color(0xFFD7E8D9),
       ),
       labelStyle: TextStyle(
-        color: selected ? Colors.white : const Color(0xFF4B5B72),
+        color: selected ? Colors.white : const Color(0xFF5E6F5E),
         fontSize: 12,
         fontWeight: FontWeight.w800,
       ),
@@ -496,7 +496,7 @@ class _DateGroupLabel extends StatelessWidget {
   Widget build(BuildContext context) => Text(
     label,
     style: const TextStyle(
-      color: Color(0xFF53647C),
+      color: Color(0xFF5E6F5E),
       fontSize: 12,
       fontWeight: FontWeight.w800,
     ),
@@ -530,7 +530,7 @@ class _AssignmentRow extends StatelessWidget {
           padding: const EdgeInsets.all(13),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
-            border: Border.all(color: const Color(0xFFE2E8F1)),
+            border: Border.all(color: const Color(0xFFD7E8D9)),
           ),
           child: Row(
             children: [
@@ -631,7 +631,7 @@ class _AssignmentEmpty extends StatelessWidget {
     decoration: BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.circular(20),
-      border: Border.all(color: const Color(0xFFE2E8F1)),
+      border: Border.all(color: const Color(0xFFD7E8D9)),
     ),
     child: const Column(
       children: [

@@ -403,7 +403,7 @@ class _TeacherClassesScreen extends ConsumerWidget {
                             vertical: 8,
                           ),
                           leading: CircleAvatar(
-                            backgroundColor: const Color(0xFFDBEAFE),
+                            backgroundColor: const Color(0xFFE8F6EA),
                             child: Text(
                               item.name.isEmpty
                                   ? 'K'
@@ -925,7 +925,7 @@ class _TeacherMessagesScreen extends ConsumerWidget {
                       return Card(
                         child: ListTile(
                           leading: const CircleAvatar(
-                            backgroundColor: Color(0xFFDBEAFE),
+                            backgroundColor: Color(0xFFE8F6EA),
                             child: Icon(
                               Icons.smart_toy_outlined,
                               color: AppColors.blue,
@@ -969,8 +969,8 @@ class TeacherMenuSheet extends ConsumerWidget {
   final AppUser user;
 
   static const _menuColors = [
-    Color(0xFF2563EB),
-    Color(0xFF06B6D4),
+    Color(0xFF007A33),
+    Color(0xFF39B54A),
     Color(0xFF16A34A),
     Color(0xFF7C3AED),
     Color(0xFFF59E0B),
@@ -1834,10 +1834,10 @@ class LegacyMenuProfileCard extends StatelessWidget {
       gradient: const LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
-        colors: [Color(0xFFEFF6FF), Colors.white],
+        colors: [Color(0xFFE8F6EA), Colors.white],
       ),
       borderRadius: BorderRadius.circular(18),
-      border: Border.all(color: const Color(0xFFDBEAFE)),
+      border: Border.all(color: const Color(0xFFE8F6EA)),
       boxShadow: AppShadows.card,
     ),
     child: Column(
@@ -1895,7 +1895,7 @@ class LegacyMenuProfileCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: const Color(0xFFDBEAFE)),
+                  border: Border.all(color: const Color(0xFFE8F6EA)),
                 ),
                 child: const Text(
                   'Guru',
@@ -1976,7 +1976,7 @@ class _ProfileMenuAction extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: const Color(0xFFDBEAFE)),
+          border: Border.all(color: const Color(0xFFE8F6EA)),
         ),
         child: Row(
           children: [
@@ -2013,8 +2013,8 @@ class _MenuSection extends StatelessWidget {
   final bool featured;
 
   static const _fallbackColors = [
-    Color(0xFF2563EB),
-    Color(0xFF06B6D4),
+    Color(0xFF007A33),
+    Color(0xFF39B54A),
     Color(0xFF16A34A),
     Color(0xFF7C3AED),
     Color(0xFFF59E0B),
@@ -2389,7 +2389,7 @@ class LegacyTeacherMenuSheet extends StatelessWidget {
               Row(
                 children: [
                   CircleAvatar(
-                    backgroundColor: const Color(0xFFDBEAFE),
+                    backgroundColor: const Color(0xFFE8F6EA),
                     child: Text(
                       user.name.isEmpty ? 'G' : user.name[0].toUpperCase(),
                       style: const TextStyle(

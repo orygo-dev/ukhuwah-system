@@ -227,7 +227,7 @@ class _TkaAttemptScreenState extends ConsumerState<TkaAttemptScreen> {
                         Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFEFF6FF),
+                            color: const Color(0xFFE8F6EA),
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child: Text(question.stimulus!),
@@ -251,12 +251,12 @@ class _TkaAttemptScreenState extends ConsumerState<TkaAttemptScreen> {
                               padding: const EdgeInsets.all(14),
                               decoration: BoxDecoration(
                                 color: active
-                                    ? const Color(0xFFDBEAFE)
+                                    ? const Color(0xFFE8F6EA)
                                     : Colors.white,
                                 border: Border.all(
                                   color: active
                                       ? AppColors.blue
-                                      : const Color(0xFFE2E8F0),
+                                      : const Color(0xFFD7E8D9),
                                   width: active ? 2 : 1,
                                 ),
                                 borderRadius: BorderRadius.circular(16),

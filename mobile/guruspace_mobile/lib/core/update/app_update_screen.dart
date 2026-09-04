@@ -43,7 +43,7 @@ class AppUpdateScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFFF9FCFF), Color(0xFFEAF6FF)],
+            colors: [Color(0xFFF5FAF6), Color(0xFFE8F6EA)],
           ),
         ),
         child: SafeArea(
@@ -97,7 +97,7 @@ class AppUpdateScreen extends StatelessWidget {
                           vertical: 7,
                         ),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFF2F7FF),
+                          color: const Color(0xFFF5FAF6),
                           border: Border.all(color: const Color(0xFF7EB8FF)),
                           borderRadius: BorderRadius.circular(99),
                         ),

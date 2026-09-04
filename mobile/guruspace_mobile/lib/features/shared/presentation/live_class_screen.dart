@@ -1421,8 +1421,8 @@ class _PjjStroke {
 
 class _PjjWhiteboardSheetState extends ConsumerState<_PjjWhiteboardSheet> {
   static const _colors = <Color>[
-    Color(0xFFF8FAFC),
-    Color(0xFF38BDF8),
+    Color(0xFFF5FAF6),
+    Color(0xFF39B54A),
     Color(0xFFFBBF24),
     Color(0xFFF87171),
     Color(0xFF4ADE80),
@@ -2485,7 +2485,7 @@ class _ControlButton extends StatelessWidget {
             icon: Icon(icon),
             style: IconButton.styleFrom(
               backgroundColor:
-                  color ?? (active ? AppColors.blue : const Color(0xFF334B68)),
+                  color ?? (active ? AppColors.blue : const Color(0xFF3D5C40)),
               disabledBackgroundColor: const Color(0xFF263C57),
               foregroundColor: Colors.white,
               fixedSize: const Size(48, 48),

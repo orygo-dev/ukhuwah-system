@@ -1063,7 +1063,7 @@ class _SpotlightPlaybackBar extends StatelessWidget {
         ? const LinearProgressIndicator(
             value: .38,
             minHeight: 3,
-            color: Color(0xFF38BDF8),
+            color: Color(0xFF39B54A),
             backgroundColor: Colors.white24,
             borderRadius: BorderRadius.all(Radius.circular(99)),
           )
@@ -1072,7 +1072,7 @@ class _SpotlightPlaybackBar extends StatelessWidget {
             allowScrubbing: true,
             padding: EdgeInsets.zero,
             colors: const VideoProgressColors(
-              playedColor: Color(0xFF38BDF8),
+              playedColor: Color(0xFF39B54A),
               bufferedColor: Colors.white38,
               backgroundColor: Colors.white24,
             ),
@@ -1196,7 +1196,7 @@ class _ReelCaption extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
-                  colors: [Color(0xFF38BDF8), Color(0xFF2563EB)],
+                  colors: [Color(0xFF39B54A), Color(0xFF007A33)],
                 ),
               ),
               child: _Avatar(author: post.author, size: 40),
@@ -1228,7 +1228,7 @@ class _ReelCaption extends StatelessWidget {
                       const SizedBox(width: 5),
                       const Icon(
                         Icons.verified_rounded,
-                        color: Color(0xFF38BDF8),
+                        color: Color(0xFF39B54A),
                         size: 17,
                       ),
                     ],
@@ -1242,7 +1242,7 @@ class _ReelCaption extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      color: Color(0xFFBAE6FD),
+                      color: Color(0xFFC6EBC9),
                       fontSize: 11.5,
                       fontWeight: FontWeight.w600,
                       shadows: [Shadow(blurRadius: 6, color: Colors.black)],
@@ -1647,8 +1647,8 @@ class _CreateSpotlightSheetState extends State<_CreateSpotlightSheet> {
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: _video == null
-                        ? const Color(0xFFF8FAFC)
-                        : const Color(0xFFEFF6FF),
+                        ? const Color(0xFFF5FAF6)
+                        : const Color(0xFFE8F6EA),
                     borderRadius: BorderRadius.circular(18),
                     border: Border.all(
                       color: _video == null
@@ -1664,7 +1664,7 @@ class _CreateSpotlightSheetState extends State<_CreateSpotlightSheet> {
                         decoration: BoxDecoration(
                           color: _video == null
                               ? Colors.white
-                              : const Color(0xFF2563EB),
+                              : const Color(0xFF007A33),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Icon(
@@ -1672,7 +1672,7 @@ class _CreateSpotlightSheetState extends State<_CreateSpotlightSheet> {
                               ? Icons.video_library_outlined
                               : Icons.check_rounded,
                           color: _video == null
-                              ? const Color(0xFF2563EB)
+                              ? const Color(0xFF007A33)
                               : Colors.white,
                         ),
                       ),
@@ -1707,7 +1707,7 @@ class _CreateSpotlightSheetState extends State<_CreateSpotlightSheet> {
                       Text(
                         _video == null ? 'Pilih' : 'Ganti',
                         style: const TextStyle(
-                          color: Color(0xFF2563EB),
+                          color: Color(0xFF007A33),
                           fontSize: 12,
                           fontWeight: FontWeight.w900,
                         ),
@@ -1723,8 +1723,8 @@ class _CreateSpotlightSheetState extends State<_CreateSpotlightSheet> {
                   child: LinearProgressIndicator(
                     minHeight: 7,
                     value: _uploadProgress > 0 ? _uploadProgress : null,
-                    color: const Color(0xFF2563EB),
-                    backgroundColor: const Color(0xFFDBEAFE),
+                    color: const Color(0xFF007A33),
+                    backgroundColor: const Color(0xFFE8F6EA),
                   ),
                 ),
                 const SizedBox(height: 6),
@@ -1733,7 +1733,7 @@ class _CreateSpotlightSheetState extends State<_CreateSpotlightSheet> {
                       ? 'Mengunggah ${(_uploadProgress * 100).round()}%'
                       : 'Menyiapkan unggahan...',
                   style: const TextStyle(
-                    color: Color(0xFF2563EB),
+                    color: Color(0xFF007A33),
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
                   ),
@@ -1792,7 +1792,7 @@ class _Avatar extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: const Color(0xFF2563EB),
+        color: const Color(0xFF007A33),
         border: darkText ? null : Border.all(color: Colors.white54, width: 1.5),
       ),
       child: url != null && url.isNotEmpty
@@ -1936,7 +1936,7 @@ class SpotlightEmptyState extends StatelessWidget {
                             gradient: const LinearGradient(
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
-                              colors: [Color(0xFF2563EB), Color(0xFF0891B2)],
+                              colors: [Color(0xFF007A33), Color(0xFF007A33)],
                             ),
                             borderRadius: BorderRadius.circular(34),
                             border: Border.all(color: Colors.white24),

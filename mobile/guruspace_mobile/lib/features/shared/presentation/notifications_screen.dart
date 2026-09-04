@@ -364,7 +364,7 @@ class _NotificationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final priorityColor = _priorityColor(item.priority);
     return Card(
-      color: item.unread ? const Color(0xFFEFF6FF) : Colors.white,
+      color: item.unread ? const Color(0xFFE8F6EA) : Colors.white,
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: onOpen,
@@ -425,7 +425,7 @@ class _NotificationCard extends StatelessWidget {
                     width: double.infinity,
                     errorBuilder: (_, _, _) => Container(
                       height: 120,
-                      color: const Color(0xFFF8FAFC),
+                      color: const Color(0xFFF5FAF6),
                       alignment: Alignment.center,
                       child: const Text('Gambar tidak dapat dimuat'),
                     ),
@@ -505,7 +505,7 @@ class _NotificationDetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
                 errorBuilder: (_, _, _) => Container(
                   height: 160,
-                  color: const Color(0xFFF8FAFC),
+                  color: const Color(0xFFF5FAF6),
                   alignment: Alignment.center,
                   child: const Text('Gambar tidak dapat dimuat'),
                 ),
@@ -518,7 +518,7 @@ class _NotificationDetailScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: const Color(0xFFE2E8F0)),
+              border: Border.all(color: const Color(0xFFD7E8D9)),
             ),
             child: Text(
               item.message,

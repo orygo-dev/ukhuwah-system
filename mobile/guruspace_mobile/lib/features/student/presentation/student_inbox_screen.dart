@@ -104,7 +104,7 @@ class _StudentInboxScreenState extends ConsumerState<StudentInboxScreen>
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        backgroundColor: const Color(0xFFF5F8FD),
+        backgroundColor: const Color(0xFFF5FAF6),
         appBar: AppBar(
           title: const Text('Inbox'),
           bottom: const TabBar(
@@ -223,7 +223,7 @@ class _RequestList extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(13),
           decoration: BoxDecoration(
-            color: const Color(0xFFEAF3FF),
+            color: const Color(0xFFE8F6EA),
             borderRadius: BorderRadius.circular(16),
           ),
           child: const Text(
@@ -336,7 +336,7 @@ class _StudentConversationScreenState
     final value = ref.watch(studentConversationProvider(widget.id));
     final other = value.asData?.value.otherUser;
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F8FD),
+      backgroundColor: const Color(0xFFF5FAF6),
       appBar: AppBar(
         titleSpacing: 0,
         title: other != null

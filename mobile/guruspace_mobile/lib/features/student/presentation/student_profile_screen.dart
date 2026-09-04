@@ -400,14 +400,14 @@ class _StudentWorksShowcase extends StatelessWidget {
     key: const Key('student-profile-works'),
     decoration: BoxDecoration(
       gradient: const LinearGradient(
-        colors: [Color(0xFF071C45), Color(0xFF0D51BC)],
+        colors: [Color(0xFF0B5A26), Color(0xFF007A33)],
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
       ),
       borderRadius: BorderRadius.circular(24),
       boxShadow: const [
         BoxShadow(
-          color: Color(0x330B4CB4),
+          color: Color(0x33007A33),
           blurRadius: 24,
           offset: Offset(0, 12),
         ),
@@ -505,7 +505,7 @@ class _WorksShowcaseData extends StatelessWidget {
                       Text(
                         'Mading dan Zona Kreasi yang sudah kamu buat',
                         style: TextStyle(
-                          color: Color(0xFFC9D9F7),
+                          color: Color(0xFFC6EBC9),
                           fontSize: 12,
                         ),
                       ),
@@ -537,7 +537,7 @@ class _WorksShowcaseData extends StatelessWidget {
                 child: const Text(
                   'Belum ada karya. Karya pertamamu akan tampil di sini.',
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Color(0xFFE4EDFC), fontSize: 12),
+                  style: TextStyle(color: Color(0xFFE8F6EA), fontSize: 12),
                 ),
               )
             else
@@ -588,7 +588,7 @@ class _WorkCount extends StatelessWidget {
           ),
           Text(
             label,
-            style: const TextStyle(color: Color(0xFFC9D9F7), fontSize: 10),
+            style: const TextStyle(color: Color(0xFFC6EBC9), fontSize: 10),
           ),
         ],
       ),
@@ -639,7 +639,7 @@ class _WorkPreviewTile extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     width: 102,
     decoration: BoxDecoration(
-      color: const Color(0xFF102E62),
+      color: const Color(0xFF0B5A26),
       borderRadius: BorderRadius.circular(15),
       border: Border.all(color: Colors.white.withValues(alpha: .14)),
     ),
@@ -885,7 +885,7 @@ class _PortfolioCard extends StatelessWidget {
                   Text(
                     kind,
                     style: const TextStyle(
-                      color: Color(0xFFBFD4F8),
+                      color: Color(0xFFC6EBC9),
                       fontSize: 10,
                       fontWeight: FontWeight.w700,
                     ),
@@ -941,7 +941,7 @@ class _WorkPlaceholder extends StatelessWidget {
   Widget build(BuildContext context) => DecoratedBox(
     decoration: const BoxDecoration(
       gradient: LinearGradient(
-        colors: [Color(0xFF1D63D7), Color(0xFF071B3F)],
+        colors: [Color(0xFF007A33), Color(0xFF0B5A26)],
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
       ),
@@ -1163,7 +1163,7 @@ class _IdentityHero extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        color: Color(0xFFF2F7FF),
+                        color: Color(0xFFF5FAF6),
                         fontSize: 12,
                         fontWeight: FontWeight.w700,
                       ),
@@ -1249,7 +1249,7 @@ class _StatsStrip extends StatelessWidget {
 class _StatDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) =>
-      Container(width: 1, height: 42, color: const Color(0xFFE8EEF6));
+      Container(width: 1, height: 42, color: const Color(0xFFD7E8D9));
 }
 
 class _StatCell extends StatelessWidget {
@@ -1565,7 +1565,7 @@ class _AvatarCropDialogState extends State<_AvatarCropDialog> {
   @override
   Widget build(BuildContext context) => Dialog(
     insetPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 28),
-    backgroundColor: const Color(0xFF0C1730),
+    backgroundColor: const Color(0xFF0F2418),
     child: Padding(
       padding: const EdgeInsets.fromLTRB(16, 18, 16, 14),
       child: Column(
@@ -1583,7 +1583,7 @@ class _AvatarCropDialogState extends State<_AvatarCropDialog> {
           const Text(
             'Geser dan zoom untuk memilih bagian foto yang digunakan.',
             textAlign: TextAlign.center,
-            style: TextStyle(color: Color(0xFFB9C9E4), fontSize: 12),
+            style: TextStyle(color: Color(0xFFA7D4B0), fontSize: 12),
           ),
           const SizedBox(height: 16),
           SizedBox(
@@ -1836,14 +1836,14 @@ class _StudentChangePasswordSheetState
                 height: 4,
                 margin: const EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD7DEEA),
+                  color: const Color(0xFFD7E8D9),
                   borderRadius: BorderRadius.circular(99),
                 ),
               ),
             ),
             const Icon(
               Icons.lock_reset_rounded,
-              color: Color(0xFF1459D7),
+              color: Color(0xFF007A33),
               size: 42,
             ),
             const SizedBox(height: 10),
@@ -1951,7 +1951,7 @@ class _ProfileAvatarFallback extends StatelessWidget {
   @override
   Widget build(BuildContext context) => DecoratedBox(
     decoration: const BoxDecoration(
-      gradient: LinearGradient(colors: [Color(0xFF87B5FF), Color(0xFF2669DF)]),
+      gradient: LinearGradient(colors: [Color(0xFF8DC63F), Color(0xFF007A33)]),
     ),
     child: Center(
       child: Text(

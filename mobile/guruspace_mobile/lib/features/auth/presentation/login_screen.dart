@@ -186,7 +186,7 @@ class _LoginHero extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 style: TextStyle(
-                  color: const Color(0xFF102B60),
+                  color: const Color(0xFF0F2418),
                   fontSize: compact ? 24 : 28,
                   height: 1.08,
                   fontWeight: FontWeight.w900,
@@ -202,7 +202,7 @@ class _LoginHero extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 style: TextStyle(
-                  color: Color(0xFF6B7D9F),
+                  color: Color(0xFF5E6F5E),
                   fontSize: 12.5,
                   fontWeight: FontWeight.w600,
                 ),
@@ -561,7 +561,7 @@ class _ForgotPasswordSheetState extends State<ForgotPasswordSheet> {
                   height: 4,
                   margin: const EdgeInsets.only(bottom: 20),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFD7DEEA),
+                    color: const Color(0xFFD7E8D9),
                     borderRadius: BorderRadius.circular(99),
                   ),
                 ),
@@ -571,12 +571,12 @@ class _ForgotPasswordSheetState extends State<ForgotPasswordSheet> {
                 height: 52,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFE9F1FF),
+                  color: const Color(0xFFE8F6EA),
                   borderRadius: BorderRadius.circular(17),
                 ),
                 child: Icon(
                   _completed ? Icons.check_rounded : Icons.lock_reset_rounded,
-                  color: const Color(0xFF1D5BD7),
+                  color: const Color(0xFF007A33),
                   size: 29,
                 ),
               ),
@@ -692,7 +692,7 @@ class _ForgotPasswordSheetState extends State<ForgotPasswordSheet> {
                         Text(
                           _message!,
                           style: const TextStyle(
-                            color: Color(0xFF426187),
+                            color: Color(0xFF3D5C40),
                             fontSize: 12,
                             height: 1.4,
                           ),

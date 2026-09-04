@@ -183,7 +183,7 @@ class _TeacherAssistantScreenState
     );
 
     return Container(
-      color: const Color(0xFFEEF5FF),
+      color: const Color(0xFFE8F6EA),
       child: Column(
         children: [
           _AssistantHeader(credits: data.credits),
@@ -401,7 +401,7 @@ class _TeacherAssistantScreenState
                             width: double.infinity,
                             padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFF8FAFC),
+                              color: const Color(0xFFF5FAF6),
                               borderRadius: BorderRadius.circular(14),
                               border: Border.all(color: AppColors.border),
                             ),
@@ -505,7 +505,7 @@ class _AssistantHeader extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 12),
     decoration: const BoxDecoration(
-      gradient: LinearGradient(colors: [Color(0xFF0B5CFF), Color(0xFF1286E8)]),
+      gradient: LinearGradient(colors: [Color(0xFF0B5A26), Color(0xFF39B54A)]),
     ),
     child: Row(
       children: [
@@ -791,7 +791,7 @@ class _AssistantBubble extends StatelessWidget {
               bottomRight: Radius.circular(18),
               topLeft: Radius.circular(4),
             ),
-            border: Border.all(color: const Color(0xFFDBEAFE)),
+            border: Border.all(color: const Color(0xFFE8F6EA)),
             boxShadow: const [
               BoxShadow(
                 color: Color(0x0D0F172A),
@@ -841,7 +841,7 @@ class _UserBubble extends StatelessWidget {
           Text(
             description,
             style: const TextStyle(
-              color: Color(0xFFDBEAFE),
+              color: Color(0xFFE8F6EA),
               fontSize: 11,
               height: 1.4,
             ),
@@ -864,12 +864,12 @@ class _WorkflowButton extends StatelessWidget {
   final int index;
   final VoidCallback onTap;
   static const tones = [
-    Color(0xFFEFF6FF),
+    Color(0xFFE8F6EA),
     Color(0xFFECFDF5),
     Color(0xFFF5F3FF),
     Color(0xFFFFFBEB),
     Color(0xFFFFF1F2),
-    Color(0xFFECFEFF),
+    Color(0xFFE8F6EA),
   ];
   @override
   Widget build(BuildContext context) => Material(
@@ -882,7 +882,7 @@ class _WorkflowButton extends StatelessWidget {
         padding: const EdgeInsets.all(11),
         decoration: BoxDecoration(
           border: Border.all(
-            color: active ? const Color(0xFF93C5FD) : const Color(0xFFDBEAFE),
+            color: active ? const Color(0xFF93C5FD) : const Color(0xFFE8F6EA),
           ),
           borderRadius: BorderRadius.circular(17),
         ),
@@ -916,7 +916,7 @@ class _WorkflowButton extends StatelessWidget {
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: active ? const Color(0xFFDBEAFE) : AppColors.muted,
+                color: active ? const Color(0xFFE8F6EA) : AppColors.muted,
                 fontSize: 10.5,
                 height: 1.35,
                 fontWeight: FontWeight.w600,
@@ -947,13 +947,13 @@ class _ThinkingRow extends StatelessWidget {
           ? const Color(0xFFECFDF5)
           : active
           ? AppColors.blueSoft
-          : const Color(0xFFF8FAFC),
+          : const Color(0xFFF5FAF6),
       borderRadius: BorderRadius.circular(12),
       border: Border.all(
         color: done
             ? const Color(0xFFD1FAE5)
             : active
-            ? const Color(0xFFBFDBFE)
+            ? const Color(0xFFA7D4B0)
             : AppColors.border,
       ),
     ),
@@ -997,7 +997,7 @@ class _AssistantStat extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.all(9),
     decoration: BoxDecoration(
-      color: const Color(0xFFF8FAFC),
+      color: const Color(0xFFF5FAF6),
       borderRadius: BorderRadius.circular(12),
     ),
     child: Column(
@@ -1213,7 +1213,7 @@ class _CostBubble extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: AppColors.blueSoft,
                   borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: const Color(0xFFDBEAFE)),
+                  border: Border.all(color: const Color(0xFFE8F6EA)),
                 ),
                 child: Column(
                   children: [
@@ -1428,7 +1428,7 @@ class _GeneratorSheetState extends ConsumerState<_GeneratorSheet> {
             Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
-                color: const Color(0xFFF8FAFC),
+                color: const Color(0xFFF5FAF6),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(color: AppColors.border),
               ),

@@ -158,9 +158,9 @@ class _AdaptiveBannerSlotState extends State<_AdaptiveBannerSlot> {
         margin: const EdgeInsets.symmetric(vertical: 16),
         padding: const EdgeInsets.fromLTRB(8, 7, 8, 8),
         decoration: BoxDecoration(
-          color: const Color(0xFFF8FAFC),
+          color: const Color(0xFFF5FAF6),
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: const Color(0xFFE2E8F0)),
+          border: Border.all(color: const Color(0xFFD7E8D9)),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,

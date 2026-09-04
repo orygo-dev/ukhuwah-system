@@ -137,7 +137,7 @@ class _SpotlightAdmobSlideState extends State<SpotlightAdmobSlide> {
           ),
           callToActionTextStyle: NativeTemplateTextStyle(
             textColor: Colors.white,
-            backgroundColor: const Color(0xFF2563EB),
+            backgroundColor: const Color(0xFF007A33),
             size: 16,
           ),
         ),

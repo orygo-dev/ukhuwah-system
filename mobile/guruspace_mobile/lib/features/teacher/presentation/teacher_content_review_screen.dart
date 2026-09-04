@@ -139,7 +139,7 @@ class _TeacherContentReviewScreenState
                       hintText:
                           'Catatan untuk siswa (wajib untuk revisi/ditolak)',
                       filled: true,
-                      fillColor: const Color(0xFFF7F9FC),
+                      fillColor: const Color(0xFFF5FAF6),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16),
                         borderSide: BorderSide.none,
@@ -156,7 +156,7 @@ class _TeacherContentReviewScreenState
                             labelText: 'Lingkup saat diterbitkan',
                             prefixIcon: const Icon(Icons.public_rounded),
                             filled: true,
-                            fillColor: const Color(0xFFF7F9FC),
+                            fillColor: const Color(0xFFF5FAF6),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(16),
                               borderSide: BorderSide.none,
@@ -313,7 +313,7 @@ class _TeacherContentReviewScreenState
     final pending = _visible.where((item) => item.status == 'PENDING_REVIEW');
     final history = _visible.where((item) => item.status != 'PENDING_REVIEW');
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F8FD),
+      backgroundColor: const Color(0xFFF5FAF6),
       appBar: AppBar(
         title: const Text('Review Konten Siswa'),
         actions: [
@@ -368,7 +368,7 @@ class _TeacherContentReviewScreenState
                         Text(
                           'Periksa karya siswa sebelum tampil di aplikasi.',
                           style: TextStyle(
-                            color: Color(0xFFDCEBFF),
+                            color: Color(0xFFE8F6EA),
                             height: 1.35,
                           ),
                         ),
@@ -574,7 +574,7 @@ class _TeacherContentReviewScreenState
                 decoration: BoxDecoration(
                   color: pending
                       ? const Color(0xFFFFF5DA)
-                      : const Color(0xFFEAF2FF),
+                      : const Color(0xFFE8F6EA),
                   borderRadius: BorderRadius.circular(13),
                 ),
                 child: Icon(

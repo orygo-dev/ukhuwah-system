@@ -491,7 +491,7 @@ class _StudentSpotlightPinterestFeed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ColoredBox(
-    color: const Color(0xFFF5F8FD),
+    color: const Color(0xFFF5FAF6),
     child: GridView.builder(
       key: const Key('student-spotlight-grid'),
       physics: const AlwaysScrollableScrollPhysics(),
@@ -749,7 +749,7 @@ class _SpotlightThumbnailAvatar extends StatelessWidget {
       height: 30,
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(
-        color: Color(0xFFDCEAFF),
+        color: Color(0xFFE8F6EA),
         shape: BoxShape.circle,
       ),
       child: source?.isNotEmpty == true
@@ -882,7 +882,7 @@ class _SpotlightCategoryBar extends StatelessWidget {
                           ? const LinearGradient(
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
-                              colors: [Color(0xFF1959E8), Color(0xFF13A9E8)],
+                              colors: [Color(0xFF1959E8), Color(0xFF39B54A)],
                             )
                           : null,
                       color: selected ? null : Colors.transparent,
@@ -909,7 +909,7 @@ class _SpotlightCategoryBar extends StatelessWidget {
                             size: 19,
                             color: selected
                                 ? Colors.white
-                                : const Color(0xFF75839A),
+                                : const Color(0xFF667085),
                           ),
                         ),
                         const SizedBox(height: 4),
@@ -962,7 +962,7 @@ class _CreateSpotlightButton extends StatelessWidget {
         height: 52,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFF367BFF), Color(0xFF0756DC)],
+            colors: [Color(0xFF367BFF), Color(0xFF0B5A26)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -1074,7 +1074,7 @@ class _SpotlightReportSheetState extends State<_SpotlightReportSheet> {
                     Text(
                       'Laporan Anda bersifat rahasia dan akan diperiksa moderator.',
                       style: TextStyle(
-                        color: Colors.blueGrey.shade600,
+                        color: AppColors.muted,
                         fontSize: 12,
                       ),
                     ),
@@ -1129,7 +1129,7 @@ class _SpotlightReportSheetState extends State<_SpotlightReportSheet> {
                   decoration: InputDecoration(
                     hintText: 'Jelaskan masalah pada konten ini...',
                     filled: true,
-                    fillColor: const Color(0xFFF6F8FC),
+                    fillColor: const Color(0xFFF5FAF6),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16),
                       borderSide: BorderSide.none,
@@ -1443,7 +1443,7 @@ class _StudentSpotlightComposerSheetState
                           gradient: const LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
-                            colors: [Color(0xFFEDF4FF), Color(0xFFF5EEFF)],
+                            colors: [Color(0xFFE8F6EA), Color(0xFFF5FAF6)],
                           ),
                           borderRadius: BorderRadius.circular(20),
                           border: Border.all(color: const Color(0xFFDCE7FB)),
@@ -1594,7 +1594,7 @@ class _StudentSpotlightComposerSheetState
                             minHeight: 7,
                             value: _progress > 0 ? _progress : null,
                             color: const Color(0xFF1769E8),
-                            backgroundColor: const Color(0xFFDCE8FF),
+                            backgroundColor: const Color(0xFFE8F6EA),
                           ),
                         ),
                         const SizedBox(height: 6),
@@ -1687,7 +1687,7 @@ class _ComposerAvatar extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        color: Color(0xFFE5EDFF),
+        color: Color(0xFFE8F6EA),
       ),
       child: bytes != null
           ? Image.memory(bytes, fit: BoxFit.cover)
@@ -1733,7 +1733,7 @@ class _AudienceSelector extends StatelessWidget {
     child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
       decoration: BoxDecoration(
-        color: const Color(0xFFF0F3F8),
+        color: const Color(0xFFF5FAF6),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: const Color(0xFFD8E0EC)),
       ),
@@ -1802,7 +1802,7 @@ class _MediaStudioCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
     decoration: BoxDecoration(
-      color: const Color(0xFFF6F8FC),
+      color: const Color(0xFFF5FAF6),
       borderRadius: BorderRadius.circular(24),
       border: Border.all(color: const Color(0xFFDCE4F0)),
       boxShadow: const [
@@ -2111,9 +2111,9 @@ class _VideoTrimStudio extends StatelessWidget {
                   fontSize: 10,
                 ),
                 editorProperties: const TrimEditorProperties(
-                  borderPaintColor: Color(0xFF3B82F6),
+                  borderPaintColor: Color(0xFF007A33),
                   scrubberPaintColor: Colors.white,
-                  circlePaintColor: Color(0xFF3B82F6),
+                  circlePaintColor: Color(0xFF007A33),
                   borderWidth: 3,
                 ),
                 areaProperties: const TrimAreaProperties(thumbnailQuality: 60),

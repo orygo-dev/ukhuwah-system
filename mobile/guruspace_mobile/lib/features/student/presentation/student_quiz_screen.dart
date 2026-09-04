@@ -178,7 +178,7 @@ class _QuizHero extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.all(18),
     decoration: BoxDecoration(
-      color: const Color(0xFFEEF2FF),
+      color: const Color(0xFFE8F6EA),
       borderRadius: BorderRadius.circular(22),
       border: Border.all(color: const Color(0xFFD9DDFC)),
     ),
@@ -201,7 +201,7 @@ class _QuizHero extends StatelessWidget {
                   const SizedBox(height: 6),
                   const Text(
                     'Uji pemahamanmu dan tingkatkan hasil terbaikmu.',
-                    style: TextStyle(color: Color(0xFF53647C), height: 1.4),
+                    style: TextStyle(color: Color(0xFF5E6F5E), height: 1.4),
                   ),
                 ],
               ),
@@ -417,10 +417,10 @@ class _SubjectChip extends StatelessWidget {
       selectedColor: const Color(0xFF6242D9),
       backgroundColor: Colors.white,
       side: BorderSide(
-        color: selected ? const Color(0xFF6242D9) : const Color(0xFFE0E4EE),
+        color: selected ? const Color(0xFF6242D9) : const Color(0xFFD7E8D9),
       ),
       labelStyle: TextStyle(
-        color: selected ? Colors.white : const Color(0xFF56657A),
+        color: selected ? Colors.white : const Color(0xFF5E6F5E),
         fontSize: 12,
         fontWeight: FontWeight.w800,
       ),
@@ -475,7 +475,7 @@ class _QuizRow extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
-          border: Border.all(color: const Color(0xFFE3E7F0)),
+          border: Border.all(color: const Color(0xFFD7E8D9)),
         ),
         child: Row(
           children: [
@@ -483,7 +483,7 @@ class _QuizRow extends StatelessWidget {
               width: 58,
               height: 58,
               decoration: BoxDecoration(
-                color: const Color(0xFFEFF2FF),
+                color: const Color(0xFFE8F6EA),
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Icon(
@@ -560,7 +560,7 @@ class _QuizResultRow extends StatelessWidget {
           padding: const EdgeInsets.all(13),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: const Color(0xFFE3E7F0)),
+            border: Border.all(color: const Color(0xFFD7E8D9)),
           ),
           child: Row(
             children: [
@@ -666,7 +666,7 @@ class _QuizEmpty extends StatelessWidget {
     decoration: BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.circular(19),
-      border: Border.all(color: const Color(0xFFE3E7F0)),
+      border: Border.all(color: const Color(0xFFD7E8D9)),
     ),
     child: const Column(
       children: [

@@ -64,20 +64,20 @@ class _StudentMadingScreenState extends ConsumerState<StudentMadingScreen> {
                       selected: selected,
                       onSelected: (_) => setState(() => _filter = label),
                       showCheckmark: false,
-                      backgroundColor: const Color(0xFFF3F6FA),
-                      selectedColor: const Color(0xFFDCEAFF),
-                      disabledColor: const Color(0xFFF3F6FA),
+                      backgroundColor: const Color(0xFFF5FAF6),
+                      selectedColor: const Color(0xFFE8F6EA),
+                      disabledColor: const Color(0xFFF5FAF6),
                       side: BorderSide(
                         color: selected
-                            ? const Color(0xFF99BCFA)
-                            : const Color(0xFFE2E8F1),
+                            ? const Color(0xFF8DC63F)
+                            : const Color(0xFFD7E8D9),
                       ),
                       shape: const StadiumBorder(),
                       padding: const EdgeInsets.symmetric(horizontal: 5),
                       labelStyle: TextStyle(
                         color: selected
-                            ? const Color(0xFF0756CF)
-                            : const Color(0xFF4D5B70),
+                            ? const Color(0xFF007A33)
+                            : const Color(0xFF5E6F5E),
                         fontSize: 12,
                         fontWeight: selected
                             ? FontWeight.w800
@@ -994,7 +994,7 @@ class _StudentMadingDetailScreenState
         : MediaQuery.paddingOf(context).top + 68;
     return Scaffold(
       key: const Key('student-mading-detail-page'),
-      backgroundColor: const Color(0xFFF6F8FC),
+      backgroundColor: const Color(0xFFF5FAF6),
       body: Stack(
         children: [
           RefreshIndicator(
@@ -1007,7 +1007,7 @@ class _StudentMadingDetailScreenState
               children: [
                 if (hasImage)
                   ColoredBox(
-                    color: const Color(0xFFF0F3F8),
+                    color: const Color(0xFFF5FAF6),
                     child: Image.network(
                       _mediaUrl(_item.imageUrl!),
                       key: const Key('student-mading-detail-image'),
@@ -1043,7 +1043,7 @@ class _StudentMadingDetailScreenState
                         _item.title,
                         key: const Key('student-mading-detail-title'),
                         style: const TextStyle(
-                          color: Color(0xFF12213A),
+                          color: Color(0xFF0F2418),
                           fontSize: 28,
                           height: 1.14,
                           fontWeight: FontWeight.w900,
@@ -1108,7 +1108,7 @@ class _StudentMadingDetailScreenState
                         _item.content,
                         key: const Key('student-mading-detail-content'),
                         style: const TextStyle(
-                          color: Color(0xFF34445D),
+                          color: Color(0xFF0F2418),
                           fontSize: 16,
                           height: 1.72,
                         ),
@@ -1298,7 +1298,7 @@ class _StudentMadingDetailScreenState
                 padding: const EdgeInsets.fromLTRB(14, 10, 10, 10),
                 decoration: const BoxDecoration(
                   color: Colors.white,
-                  border: Border(top: BorderSide(color: Color(0xFFE4E9F1))),
+                  border: Border(top: BorderSide(color: Color(0xFFD7E8D9))),
                 ),
                 child: Row(
                   children: [
@@ -1367,7 +1367,7 @@ class _MadingFloatingControl extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white.withValues(alpha: .94),
           shape: BoxShape.circle,
-          border: Border.all(color: const Color(0xFFE2E7EF)),
+          border: Border.all(color: const Color(0xFFD7E8D9)),
           boxShadow: const [
             BoxShadow(
               color: Color(0x2B0D1D36),
@@ -1410,7 +1410,7 @@ class _MadingActionButton extends StatelessWidget {
         duration: const Duration(milliseconds: 140),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         decoration: BoxDecoration(
-          color: active ? const Color(0xFFEAF2FF) : Colors.transparent,
+          color: active ? const Color(0xFFE8F6EA) : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -1553,7 +1553,7 @@ class _MadingCreateButton extends StatelessWidget {
             gradient: const LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFF2484FF), Color(0xFF0756DC)],
+              colors: [Color(0xFF39B54A), Color(0xFF0B5A26)],
             ),
             borderRadius: BorderRadius.circular(18),
             border: Border.all(color: Colors.white, width: 2),
@@ -1771,7 +1771,7 @@ class _StudentMadingPostCardState extends ConsumerState<StudentMadingPostCard> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: const Color(0xFFE7EBF2)),
+            border: Border.all(color: const Color(0xFFD7E8D9)),
             boxShadow: const [
               BoxShadow(
                 color: Color(0x12132B4E),
@@ -2009,7 +2009,7 @@ class _MadingEmptyState extends StatelessWidget {
           const Icon(
             Icons.newspaper_rounded,
             size: 62,
-            color: Color(0xFF9EB8E8),
+            color: Color(0xFF8DC63F),
           ),
           const SizedBox(height: 16),
           Text(
@@ -2121,7 +2121,7 @@ class _MadingImageLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const ColoredBox(
-    color: Color(0xFFE9EEF6),
+    color: Color(0xFFD7E8D9),
     child: Center(
       child: SizedBox.square(
         dimension: 24,
@@ -2273,7 +2273,7 @@ class _StudentMadingComposerSheetState
                   height: 4,
                   margin: const EdgeInsets.only(bottom: 18),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFD6DEEA),
+                    color: const Color(0xFFD7E8D9),
                     borderRadius: BorderRadius.circular(99),
                   ),
                 ),
@@ -2593,7 +2593,7 @@ bool _sameSchool({
 Color _categoryColor(String value) => switch (_category(value)) {
   'Artikel Siswa' => const Color(0xFF8A4A20),
   'Event' => const Color(0xFFD51B7A),
-  _ => const Color(0xFF173B82),
+  _ => const Color(0xFF0B5A26),
 };
 
 IconData _categoryIcon(String value) => switch (_category(value)) {

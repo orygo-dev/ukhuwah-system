@@ -23,7 +23,7 @@ class StudentPortalHero extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(30),
-        border: Border.all(color: const Color(0xFFDBEAFE)),
+        border: Border.all(color: const Color(0xFFE8F6EA)),
         boxShadow: const [
           BoxShadow(
             color: Color(0x140F4C81),
@@ -91,7 +91,7 @@ class StudentPortalHero extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Color(0xFF2563EB), Color(0xFF06B6D4)],
+                colors: [Color(0xFF007A33), Color(0xFF39B54A)],
               ),
             ),
             child: Column(
@@ -164,7 +164,7 @@ class _HeroPill extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
     decoration: BoxDecoration(
-      color: const Color(0xFFF8FAFC),
+      color: const Color(0xFFF5FAF6),
       borderRadius: BorderRadius.circular(20),
       border: Border.all(color: AppColors.border),
     ),
@@ -209,14 +209,9 @@ class StudentIdentityCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(0xFFF0F5FF), Colors.white],
-          ),
+          gradient: AppGradients.brand,
           borderRadius: BorderRadius.circular(AppRadii.hero),
-          border: Border.all(color: const Color(0xFFDDE7F6)),
-          boxShadow: AppShadows.card,
+          boxShadow: AppShadows.floating,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -227,14 +222,15 @@ class StudentIdentityCard extends StatelessWidget {
                   width: 58,
                   height: 58,
                   alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFDDE7FF),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: .18),
                     shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white30),
                   ),
                   child: Text(
                     _initials(name),
                     style: const TextStyle(
-                      color: AppColors.blue,
+                      color: Colors.white,
                       fontSize: 19,
                       fontWeight: FontWeight.w900,
                     ),
@@ -249,21 +245,25 @@ class StudentIdentityCard extends StatelessWidget {
                         name,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.titleLarge,
+                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          color: Colors.white,
+                        ),
                       ),
                       const SizedBox(height: 3),
                       Text(
                         schoolName,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.bodyMedium,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Colors.white70,
+                        ),
                       ),
                     ],
                   ),
                 ),
                 const Icon(
                   Icons.chevron_right_rounded,
-                  color: AppColors.mutedLight,
+                  color: Colors.white70,
                 ),
               ],
             ),
@@ -276,28 +276,30 @@ class StudentIdentityCard extends StatelessWidget {
                     icon: Icons.school_outlined,
                     label: 'Kelas',
                     value: className,
-                    color: AppColors.blue,
+                    color: Colors.white,
+                    light: true,
                   ),
                 ),
-                const _IdentityDivider(),
+                const _IdentityDivider(light: true),
                 Expanded(
                   flex: 2,
                   child: _StudentIdentityItem(
                     icon: Icons.person_outline_rounded,
                     label: 'Wali kelas',
                     value: teacherName,
-                    color: AppColors.violet,
+                    color: Colors.white,
+                    light: true,
                   ),
                 ),
                 if (attendancePercent != null) ...[
-                  const _IdentityDivider(),
+                  const _IdentityDivider(light: true),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         'Hadir',
                         style: TextStyle(
-                          color: AppColors.muted,
+                          color: Colors.white70,
                           fontSize: 10,
                           fontWeight: FontWeight.w600,
                         ),
@@ -306,7 +308,7 @@ class StudentIdentityCard extends StatelessWidget {
                       Text(
                         '$attendancePercent%',
                         style: const TextStyle(
-                          color: AppColors.success,
+                          color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.w900,
                         ),
@@ -329,14 +331,16 @@ class StudentIdentityCard extends StatelessWidget {
 }
 
 class _IdentityDivider extends StatelessWidget {
-  const _IdentityDivider();
+  const _IdentityDivider({this.light = false});
+
+  final bool light;
 
   @override
   Widget build(BuildContext context) => Container(
     width: 1,
     height: 44,
     margin: const EdgeInsets.symmetric(horizontal: 9),
-    color: AppColors.border,
+    color: light ? Colors.white24 : AppColors.border,
   );
 }
 
@@ -346,12 +350,14 @@ class _StudentIdentityItem extends StatelessWidget {
     required this.label,
     required this.value,
     required this.color,
+    this.light = false,
   });
 
   final IconData icon;
   final String label;
   final String value;
   final Color color;
+  final bool light;
 
   @override
   Widget build(BuildContext context) => Row(
@@ -361,7 +367,7 @@ class _StudentIdentityItem extends StatelessWidget {
         width: 34,
         height: 34,
         decoration: BoxDecoration(
-          color: color.withValues(alpha: .1),
+          color: light ? Colors.white24 : color.withValues(alpha: .1),
           borderRadius: BorderRadius.circular(AppRadii.small),
         ),
         child: Icon(icon, color: color, size: 18),
@@ -373,8 +379,8 @@ class _StudentIdentityItem extends StatelessWidget {
           children: [
             Text(
               label,
-              style: const TextStyle(
-                color: AppColors.muted,
+              style: TextStyle(
+                color: light ? Colors.white70 : AppColors.muted,
                 fontSize: 10,
                 fontWeight: FontWeight.w600,
               ),
@@ -384,8 +390,8 @@ class _StudentIdentityItem extends StatelessWidget {
               value,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: AppColors.navy,
+              style: TextStyle(
+                color: light ? Colors.white : AppColors.navy,
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
               ),
@@ -432,7 +438,7 @@ class TeacherProfileHero extends StatelessWidget {
       gradient: const LinearGradient(
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
-        colors: [Color(0xFF0B3697), Color(0xFF075BD8), Color(0xFF1479F2)],
+        colors: [Color(0xFF0B5A26), Color(0xFF007A33), Color(0xFF39B54A)],
         stops: [0, .52, 1],
       ),
       borderRadius: BorderRadius.circular(AppRadii.hero),
@@ -515,7 +521,7 @@ class TeacherProfileHero extends StatelessWidget {
                         ? 'Guru'
                         : 'Guru • ${classNames.length} kelas aktif',
                     style: const TextStyle(
-                      color: Color(0xFFEAF2FF),
+                      color: Color(0xFFE8F6EA),
                       fontSize: 12.5,
                       fontWeight: FontWeight.w600,
                     ),
@@ -615,7 +621,7 @@ class TeacherProfileHero extends StatelessWidget {
                   const Text(
                     'Saldo Kredit',
                     style: TextStyle(
-                      color: Color(0xFFD7E7FF),
+                      color: Color(0xFFD7E8D9),
                       fontSize: 10.5,
                       fontWeight: FontWeight.w600,
                     ),
@@ -714,7 +720,7 @@ class StudentProfileHero extends StatelessWidget {
       gradient: const LinearGradient(
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
-        colors: [Color(0xFF0B3697), Color(0xFF075BD8), Color(0xFF1479F2)],
+        colors: [Color(0xFF0B5A26), Color(0xFF007A33), Color(0xFF39B54A)],
         stops: [0, .52, 1],
       ),
       borderRadius: BorderRadius.circular(AppRadii.hero),
@@ -809,7 +815,7 @@ class StudentProfileHero extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      color: Color(0xFFEAF2FF),
+                      color: Color(0xFFE8F6EA),
                       fontSize: 12.5,
                       fontWeight: FontWeight.w600,
                     ),
@@ -912,7 +918,7 @@ class _StudentHeroMetric extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(
-            color: Color(0xFFD7E7FF),
+            color: Color(0xFFD7E8D9),
             fontSize: 9,
             fontWeight: FontWeight.w600,
           ),
@@ -1025,7 +1031,7 @@ class LegacyTeacherProfileHero extends StatelessWidget {
                         width: 22,
                         height: 22,
                         decoration: BoxDecoration(
-                          color: const Color(0xFF2563EB),
+                          color: const Color(0xFF007A33),
                           shape: BoxShape.circle,
                           border: Border.all(color: Colors.white, width: 2),
                         ),
@@ -1126,7 +1132,7 @@ class LegacyTeacherProfileHero extends StatelessWidget {
               children: [
                 const Icon(
                   Icons.monetization_on_outlined,
-                  color: Color(0xFFBAE6FD),
+                  color: Color(0xFFC6EBC9),
                   size: 21,
                 ),
                 const SizedBox(width: 9),
@@ -1522,7 +1528,7 @@ class QuickMenuGrid extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(radius),
                                 border: Border.all(
                                   color: usesImage
-                                      ? const Color(0xFFE3EAF5)
+                                      ? const Color(0xFFD7E8D9)
                                       : item.color.withValues(alpha: .2),
                                 ),
                               ),

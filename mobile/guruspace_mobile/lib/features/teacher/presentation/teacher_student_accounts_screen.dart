@@ -300,7 +300,7 @@ class _AccountSummary extends StatelessWidget {
         const SizedBox(height: 4),
         Text(
           '$active dari $total akun login sudah aktif',
-          style: const TextStyle(color: Color(0xFFDCEBFF), fontSize: 12),
+          style: const TextStyle(color: Color(0xFFE8F6EA), fontSize: 12),
         ),
         const SizedBox(height: 16),
         Row(

@@ -250,7 +250,7 @@ class _StudentTopBar extends ConsumerWidget implements PreferredSizeWidget {
         ?.value;
     return AppBar(
       toolbarHeight: 64,
-      backgroundColor: const Color(0xFF1464F4),
+      backgroundColor: const Color(0xFF007A33),
       foregroundColor: Colors.white,
       surfaceTintColor: Colors.transparent,
       titleSpacing: 16,
@@ -414,7 +414,7 @@ class _StudentHomeScreen extends ConsumerWidget {
                         QuickMenuItem(
                           label: 'Absensi',
                           icon: Icons.event_available_rounded,
-                          color: const Color(0xFF2858F5),
+                          color: const Color(0xFF007A33),
                           assetPath: 'assets/icons/menu/absensi.png',
                           iconUrl: _quickMenuIconUrl(appDisplay, 'attendance'),
                           onTap: () => _openStudentPage(
@@ -490,7 +490,7 @@ class _StudentHomeScreen extends ConsumerWidget {
                         QuickMenuItem(
                           label: 'Mading',
                           icon: Icons.newspaper_rounded,
-                          color: const Color(0xFF1475C9),
+                          color: const Color(0xFF007A33),
                           assetPath: 'assets/icons/menu/mading.png',
                           iconUrl: _quickMenuIconUrl(appDisplay, 'board'),
                           onTap: onMading,
@@ -566,7 +566,7 @@ class _StudentHomeHeader extends ConsumerWidget {
       decoration: BoxDecoration(
         color: Colors.white.withValues(alpha: .96),
         borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: const Color(0xFFE4EBF7)),
+        border: Border.all(color: const Color(0xFFD7E8D9)),
         boxShadow: const [
           BoxShadow(
             color: Color(0x120C3B84),
@@ -693,7 +693,7 @@ class _StudentHeaderAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Material(
-    color: const Color(0xFFF0F5FF),
+    color: const Color(0xFFF5FAF6),
     borderRadius: BorderRadius.circular(15),
     child: InkWell(
       onTap: onTap,
@@ -706,7 +706,7 @@ class _StudentHeaderAction extends StatelessWidget {
             alignment: Alignment.center,
             clipBehavior: Clip.none,
             children: [
-              Icon(icon, color: const Color(0xFF164FC4), size: 24),
+              Icon(icon, color: const Color(0xFF007A33), size: 24),
               if (showBadge)
                 Positioned(
                   right: badgeCount == null ? 10 : 4,
@@ -852,7 +852,7 @@ class _StudentGreeting extends StatelessWidget {
           height: 47,
           padding: const EdgeInsets.all(2.5),
           decoration: const BoxDecoration(
-            color: Color(0xFFDCE7FF),
+            color: Color(0xFFE8F6EA),
             shape: BoxShape.circle,
           ),
           child: ClipOval(
@@ -877,7 +877,7 @@ class _AvatarFallback extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     alignment: Alignment.center,
     decoration: const BoxDecoration(
-      gradient: LinearGradient(colors: [Color(0xFF78A8FF), Color(0xFF1F5FEA)]),
+      gradient: LinearGradient(colors: [Color(0xFF39B54A), Color(0xFF007A33)]),
     ),
     child: Text(
       name.isEmpty ? 'S' : name[0].toUpperCase(),
@@ -1029,7 +1029,7 @@ class StudentHomeMadingPreview extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: const Color(0xFFE5EAF3)),
+            border: Border.all(color: const Color(0xFFD7E8D9)),
             boxShadow: const [
               BoxShadow(
                 color: Color(0x10132D57),
@@ -1078,7 +1078,7 @@ class StudentHomeMadingPreview extends StatelessWidget {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                          color: Color(0xFF1857C9),
+                          color: Color(0xFF007A33),
                           fontSize: 8,
                           letterSpacing: .3,
                           fontWeight: FontWeight.w900,
@@ -1118,7 +1118,7 @@ class StudentHomeMadingPreview extends StatelessWidget {
                               clipBehavior: Clip.antiAlias,
                               alignment: Alignment.center,
                               decoration: const BoxDecoration(
-                                color: Color(0xFFE8F0FF),
+                                color: Color(0xFFE8F6EA),
                                 shape: BoxShape.circle,
                               ),
                               child:
@@ -1145,7 +1145,7 @@ class StudentHomeMadingPreview extends StatelessWidget {
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
-                                      color: Color(0xFF53627A),
+                                      color: Color(0xFF5E6F5E),
                                       fontSize: 9,
                                       fontWeight: FontWeight.w800,
                                     ),
@@ -1169,7 +1169,7 @@ class StudentHomeMadingPreview extends StatelessWidget {
                             const Icon(
                               Icons.arrow_forward_rounded,
                               size: 15,
-                              color: Color(0xFF2A63D7),
+                              color: Color(0xFF007A33),
                             ),
                           ],
                         ),
@@ -1196,7 +1196,7 @@ class _MadingInitial extends StatelessWidget {
     child: Text(
       author.trim().isEmpty ? 'S' : author.trim()[0].toUpperCase(),
       style: const TextStyle(
-        color: Color(0xFF2862D7),
+        color: Color(0xFF007A33),
         fontSize: 9,
         fontWeight: FontWeight.w900,
       ),
@@ -1212,7 +1212,7 @@ class _MadingArt extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     decoration: const BoxDecoration(
       gradient: LinearGradient(
-        colors: [Color(0xFF173D7A), Color(0xFF4E8EF7)],
+        colors: [Color(0xFF0B5A26), Color(0xFF39B54A)],
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
       ),
@@ -1234,7 +1234,7 @@ class _MadingHomeEmpty extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Material(
     key: const Key('student-home-mading-empty'),
-    color: const Color(0xFFF5F8FE),
+    color: const Color(0xFFF5FAF6),
     borderRadius: BorderRadius.circular(20),
     child: InkWell(
       onTap: onTap,
@@ -1247,12 +1247,12 @@ class _MadingHomeEmpty extends StatelessWidget {
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                color: const Color(0xFFE1EBFF),
+                color: const Color(0xFFE8F6EA),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: const Icon(
                 Icons.auto_stories_rounded,
-                color: Color(0xFF2862D7),
+                color: Color(0xFF007A33),
               ),
             ),
             const SizedBox(width: 13),
@@ -1279,7 +1279,7 @@ class _MadingHomeEmpty extends StatelessWidget {
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right_rounded, color: Color(0xFF2862D7)),
+            const Icon(Icons.chevron_right_rounded, color: Color(0xFF007A33)),
           ],
         ),
       ),
@@ -1319,7 +1319,7 @@ class _SpotlightStrip extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.video_collection_outlined,
-                    color: Color(0xFF8CB3FF),
+                    color: Color(0xFF8DC63F),
                     size: 38,
                   ),
                   SizedBox(width: 13),
@@ -1339,7 +1339,7 @@ class _SpotlightStrip extends StatelessWidget {
                         Text(
                           'Konten siswa yang telah diterbitkan akan tampil di sini.',
                           style: TextStyle(
-                            color: Color(0xFFAFB8C8),
+                            color: Color(0xFF98A2B3),
                             fontSize: 11,
                             height: 1.35,
                           ),
@@ -1397,8 +1397,8 @@ class StudentHomeSpotlightPreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const gradients = [
-      [Color(0xFF223D63), Color(0xFFF7A621)],
-      [Color(0xFF6C3C25), Color(0xFF48A6B4)],
+      [Color(0xFF0B5A26), Color(0xFFF7A621)],
+      [Color(0xFF6C3C25), Color(0xFF39B54A)],
       [Color(0xFF263945), Color(0xFFB4683B)],
     ];
     final mediaImage = item.thumbnailUrl?.trim().isNotEmpty == true
@@ -1498,7 +1498,7 @@ class StudentHomeSpotlightPreview extends StatelessWidget {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                          color: Color(0xFFD4DEEC),
+                          color: Color(0xFFD7E8D9),
                           fontSize: 8.5,
                           height: 1.2,
                           fontWeight: FontWeight.w600,
@@ -1589,9 +1589,9 @@ class _StudentUnlinkedState extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(13),
             decoration: BoxDecoration(
-              color: const Color(0xFFEFF6FF),
+              color: const Color(0xFFE8F6EA),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFFBFDBFE)),
+              border: Border.all(color: const Color(0xFFA7D4B0)),
             ),
             child: const Row(
               children: [
@@ -1652,7 +1652,7 @@ class _StudentDashboardHero extends StatelessWidget {
             width: 58,
             height: 58,
             decoration: const BoxDecoration(
-              color: Color(0xFFE5EDFF),
+              color: Color(0xFFE8F6EA),
               shape: BoxShape.circle,
             ),
             alignment: Alignment.center,
@@ -1707,7 +1707,7 @@ class _StudentDashboardHero extends StatelessWidget {
                 CircularProgressIndicator(
                   value: safeProgress / 100,
                   strokeWidth: 7,
-                  backgroundColor: const Color(0xFFE8EEF7),
+                  backgroundColor: const Color(0xFFE8F6EA),
                   color: AppColors.blue,
                   strokeCap: StrokeCap.round,
                 ),
@@ -2247,7 +2247,7 @@ class _TkaList extends ConsumerWidget {
                   Row(
                     children: [
                       const CircleAvatar(
-                        backgroundColor: Color(0xFFDBEAFE),
+                        backgroundColor: Color(0xFFE8F6EA),
                         child: Icon(
                           Icons.fact_check_outlined,
                           color: AppColors.blue,
@@ -2667,7 +2667,7 @@ class _StudentPjjLobbyScreenState extends State<_StudentPjjLobbyScreen> {
               gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Color(0xFFE8F0FF), Color(0xFFF4F8FF)],
+                colors: [Color(0xFFE8F6EA), Color(0xFFF5FAF6)],
               ),
               borderRadius: BorderRadius.circular(18),
               border: Border.all(color: AppColors.border),
@@ -3048,7 +3048,7 @@ class _StudentMenuSheet extends StatelessWidget {
               Row(
                 children: [
                   CircleAvatar(
-                    backgroundColor: const Color(0xFFDBEAFE),
+                    backgroundColor: const Color(0xFFE8F6EA),
                     child: Text(
                       user.name.isEmpty ? 'S' : user.name[0].toUpperCase(),
                       style: const TextStyle(
